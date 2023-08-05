@@ -1,11 +1,12 @@
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Link, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import React from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useState } from "react";
 import { ListItemIcon, Menu, MenuItem, Typography } from "@mui/material";
-
-const CategoryItem = ({ title, type }) => {
+import {Cdate} from './CategoryData'
+const CategoryItem = (props) => {
   const [anchorEl, setAnchorEl] = useState();
+  const [categoryData , setCategoryData] = useState(Cdate)
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -14,22 +15,22 @@ const CategoryItem = ({ title, type }) => {
     setAnchorEl(null);
   };
 
-  if (type === "text") {
+  if (props.type === "text") {
     return (
       <div>
         <ListItem>
           <ListItemButton>
-            <ListItemText primary={title} />
+           <Link sx={{textDecoration:"none" ,all:"unset"}} href = {props.pushLink}> <ListItemText primary={props.title} /></Link>
           </ListItemButton>
         </ListItem>
       </div>
     );
-  } else if (type === "button") {
+  } else if (props.type === "button") {
     return (
       <div>
         <ListItem>
           <ListItemButton>
-            <ListItemText primary={title} />
+            <ListItemText primary={props.title} />
             <ListItemIcon onClick={handleClick}>
               <KeyboardArrowRightIcon />
             </ListItemIcon>
@@ -43,9 +44,18 @@ const CategoryItem = ({ title, type }) => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            {props.content.map((item)=>{
+              
+            return(                
+             <Link sx={{textDecoration:"none" ,all:"unset"}} href ={item.pushLink}> <MenuItem onClick={handleClose} >{item.text}
+              </MenuItem></Link>
+            )
+
+            })}
+
+
+            {/* <MenuItem onClick={handleClose}></MenuItem>
+            <MenuItem onClick={handleClose}>Logout</MenuItem> */}
           </Menu>
         </ListItem>
 
