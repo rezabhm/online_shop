@@ -1,4 +1,4 @@
-import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Link, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import React from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useState } from "react";
@@ -20,7 +20,7 @@ const CategoryItem = (props) => {
       <div>
         <ListItem>
           <ListItemButton>
-            <ListItemText primary={props.title} />
+            <ListItemText sx={{whiteSpace:"nowrap"}} primary={props.title} />
           </ListItemButton>
         </ListItem>
       </div>
@@ -44,9 +44,17 @@ const CategoryItem = (props) => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
+             {props.content.map((item)=>{
+              
+            return(                
+             <Link sx={{textDecoration:"none" ,all:"unset"}} href ={item.pushLink}> <MenuItem onClick={handleClose} >{item.text}
+              </MenuItem></Link>
+            )
+
+            })}
+            {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleClose}>Logout</MenuItem> */}
           </Menu>
         </ListItem>
 
