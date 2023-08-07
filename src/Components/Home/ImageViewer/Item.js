@@ -6,7 +6,7 @@ const Item = (props) => {
     <Paper>
       <Box>
         <img
-          src={props.item.img}
+          src={props.item}
           alt=""
           style={{ width: "100%", height: "400px" }}
         />
