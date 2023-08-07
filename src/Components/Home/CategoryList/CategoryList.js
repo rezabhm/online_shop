@@ -16,7 +16,7 @@ import CategoryItem from "./CategoryItem";
 import { Cdate } from "./CategoryData";
 import { Padding } from "@mui/icons-material";
 
-const CategoryList = () => {
+const CategoryList = (props) => {
 
 
   
@@ -27,7 +27,7 @@ const CategoryList = () => {
       <Box p={1} >
         <List  sx={{maxWidth:"300px" , alignItems:"center" ,Padding:"0 0"}}>
 
-      {categoryData.map(item=> <CategoryItem key={item.id} {...item}/>)}
+      {props.data.map(item=> <CategoryItem key={item.id} {...item}/>)}
       </List>
       </Box>
     </div>
