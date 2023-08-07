@@ -9,7 +9,6 @@ import ShoppingIcon from "./shoppingIcon";
 function NavBar(){
 
     const styled = {alignItems:'center', justifyContent:'center',display:'flex'}
-    const styled2 = {alignItems:'center', justifyContent:'center',display:'flex', border:'1px solid black'}
 
 
     return(
