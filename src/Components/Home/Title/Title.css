@@ -1,11 +1,18 @@
-.Title{
-    width: 15px;
+/*.Title{*/
+/*    width: 15px;*/
+/*    height: 30px;*/
+/*    background-color: red;*/
+/*    border-radius: 2px;*/
+/*    margin-top: 10px;*/
+/*}*/
+p{
+    background-color: rgba(211, 211 , 211 , 0.4);
+    width: 100% !important;
     height: 30px;
-    background-color: red;
-    border-radius: 2px;
-    margin-top: 10px;
-}
-.Container{
-    background: rgb(255,255,255);
-    background: linear-gradient(283deg, rgba(255,255,255,1) 0%, rgba(148,146,146,1) 50%, rgba(255,255,255,1) 100%);
+    color: red;
+    margin-left: 10px;
+    border-left: 25px solid red;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }
