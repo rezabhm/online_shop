@@ -8,7 +8,7 @@ function Logo(props){
 
         <>
 
-            <h1>
+            <h1 style={{alignItems:'center', justifyContent:'center', display:'flex'}}>
 
                 {props.title}
 

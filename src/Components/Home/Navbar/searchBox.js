@@ -7,14 +7,14 @@ function SearchBox(){
 
     return(
 
-        <Container maxWidth="md" sx={{ mt: 20 }}>
+        <Container maxWidth="md" sx={{ mt: 0 }}>
             <TextField
                 id="search"
                 type="search"
                 label="What do you looking for?"
                 onChange={()=>{
                     console.log('this is search')}}
-                sx={{ width: 600 }}
+                sx={{ width: '100%' }}
 
                 InputProps={{
                     endAdornment: (

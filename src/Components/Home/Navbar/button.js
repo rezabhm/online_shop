@@ -7,6 +7,9 @@ function NavButton(props){
 
         color: 'rgba(0,0,0,1)',
         backgroundColor: 'rgba(0,0,0,0)',
+        alignItems:'center',
+        justifyContent:'center',
+        display:'flex'
 
     })
 
@@ -18,8 +21,10 @@ function NavButton(props){
 
                 color: 'rgba(0,0,0,1)',
                 backgroundColor: 'rgba(0,0,0,0)',
-                borderBottom:'3px solid rgba(0,0,0,.5)'
-
+                borderBottom:'3px solid rgba(0,0,0,.5)',
+                alignItems:'center',
+                justifyContent:'center',
+                display:'flex'
             })
 
         }
@@ -32,7 +37,15 @@ function NavButton(props){
 
     return(
 
-        <Link href={props.pushLink} >
+        <Link href={props.pushLink} style={{
+
+            alignItems:'center',
+            justifyContent:'center',
+            display:'flex'
+
+
+
+        }}>
 
             <Button
 
