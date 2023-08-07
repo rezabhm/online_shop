@@ -29,7 +29,7 @@ const CategoryItem = (props) => {
     return (
       <div>
         <ListItem>
-          <ListItemButton onClick={handleClick}>
+          <ListItemButton  onClick={handleClick}>
             <ListItemText primary={props.title} />
             <ListItemIcon >
               <KeyboardArrowRightIcon />
