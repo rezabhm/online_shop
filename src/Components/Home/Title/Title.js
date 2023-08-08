@@ -5,7 +5,7 @@ function Title(){
     return(
         <>
 
-                <p>Today's </p>
+                <p className='title-home'>Today's </p>
         </>
     )
 }
