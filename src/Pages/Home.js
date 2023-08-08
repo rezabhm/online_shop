@@ -9,7 +9,6 @@ import {Cdate} from "../Components/Home/CategoryList/CategoryData";
 
 function Home(){
 
-    const styled = {alignItems:'center', justifyContent:'center',display:'flex'}
 
     return(
 
@@ -30,7 +29,7 @@ function Home(){
                 </Grid>
 
 
-                <Grid item xs={2} >
+                <Grid item xs={2} style={{borderRight:'1px solid rgba(0,0,0,0.5)'}} >
 
                     <CategoryList data={Cdate} />
 
