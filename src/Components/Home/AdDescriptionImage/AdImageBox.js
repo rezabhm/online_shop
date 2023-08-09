@@ -7,7 +7,6 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 function AdImageBox(props){
 
-    console.log(props)
 
     if (props.size === 'big') {
 
