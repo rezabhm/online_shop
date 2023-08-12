@@ -1,9 +1,25 @@
 import {Button} from "@mui/material";
+import {Grid} from "@material-ui/core";
 
 function ForgetPassword(){
     return(
         <>
-            <Button onChange={()=> ("Done PassWord")}color="error">Forget Password ?</Button>
+            <Grid container xs={12}>
+
+                <Grid item xs={6}>
+                    <Button onChange={()=> ("Done Log In")} variant="contained" color="success">
+                        Log In
+                    </Button>
+                </Grid>
+
+
+                <Grid item xs={6}>
+                    <Button onChange={()=> ("Done ForgetPassWord")}color="error">
+                        Forget Password ?
+                    </Button>
+                </Grid>
+
+            </Grid>
         </>
     )
 }
