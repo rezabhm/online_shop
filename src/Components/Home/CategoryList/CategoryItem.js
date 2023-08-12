@@ -34,12 +34,9 @@ const CategoryItem = (props) => {
   } else if (props.type === "button") {
     return (
       <div>
-        <ListItem sx={{ width: "300px" }}>
-          <ListItemButton
-            sx={{ display: "flex", justifyContent: "space-between" }}
-            onClick={handleClick}
-          >
-            <ListItemText sx={{ whiteSpace: "nowrap" }} primary={props.title} />
+        <ListItem>
+          <ListItemButton sx={{}} onClick={handleClick}>
+            <ListItemText sx={{}} primary={props.title} />
             <ListItemIcon>
               <KeyboardArrowRightIcon />
             </ListItemIcon>
