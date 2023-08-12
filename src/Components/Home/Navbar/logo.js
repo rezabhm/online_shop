@@ -1,25 +1,22 @@
+import { Typography } from "@material-ui/core";
 import React from "react";
 
-
-function Logo(props){
-
-
-    return(
-
-        <>
-
-            <h1 style={{alignItems:'center', justifyContent:'center', display:'flex'}}>
-
-                {props.title}
-
-            </h1>
-
-        </>
-
-
-
-    )
-
+function Logo(props) {
+  return (
+    <>
+      <Typography
+        variant="h4"
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          whiteSpace: "nowrap",
+        }}
+      >
+        {props.title}
+      </Typography>
+    </>
+  );
 }
 
 export default Logo;
