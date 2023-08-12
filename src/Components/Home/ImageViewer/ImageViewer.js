@@ -16,7 +16,7 @@ const ImageViewer = (props) => {
         indicatorIconButtonProps={{
           style: {
             zIndex: "3",
-            bottom: "150px",
+            bottom: "50px",
             color: "gray",
             " @media(max-width:1400px)": {
               bottom: "100px",
@@ -31,7 +31,7 @@ const ImageViewer = (props) => {
         }}
         sx={{
           width: "100%",
-          height: "87%",
+          height: "100%",
 
           // Change the display size of the dotted buttons
           "& .MuiButtonBase-root": {
