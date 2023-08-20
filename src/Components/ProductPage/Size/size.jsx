@@ -5,6 +5,8 @@ import FolderIcon from '@mui/icons-material/Folder';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Grid, Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 
 const Size = () => {
 
@@ -14,24 +16,28 @@ const Size = () => {
       setValue(newValue)
     }
   return (
-    <BottomNavigation sx={{ width: 500 }} value={value} onChange={handleChange}>
-    <BottomNavigationAction
-      label="Recents"
-      value="recents"
-      icon={<RestoreIcon />}
-    />
-    <BottomNavigationAction
-      label="Favorites"
-      value="favorites"
-      icon={<FavoriteIcon />}
-    />
-    <BottomNavigationAction
-      label="Nearby"
-      value="nearby"
-      icon={<LocationOnIcon />}
-    />
-    <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-  </BottomNavigation>
+    <> 
+    <Grid container sx={{maxWidth:"300px" ,display:"flex" , alignItems:'center' ,justifyContent:"space-between"}}>
+    <Typography sx={{fontSize:"25px"}} variant='h5'>Size:</Typography>
+
+    <Grid item sx={{cursor:"pointer",border:"1px solid black",textAlign:"center" ,borderRadius:"5px",width:"30px",padding:"4px",height:"30px","&:hover":{backgroundColor:"#DB4444"} }}>
+        <Typography>XS</Typography>
+    </Grid> 
+
+    <Grid item  sx={{cursor:"pointer",border:"1px solid black",textAlign:"center" ,borderRadius:"5px",width:"30px",padding:"4px",height:"30px","&:hover":{backgroundColor:"#DB4444"} }}>
+        <Typography>S</Typography>
+    </Grid>
+
+    <Grid item  sx={{cursor:"pointer",border:"1px solid black",textAlign:"center" ,borderRadius:"5px",width:"30px",padding:"4px",height:"30px","&:hover":{backgroundColor:"#DB4444"} }}>
+        <Typography>M</Typography>
+    </Grid>
+
+    <Grid item  sx={{cursor:"pointer",border:"1px solid black",textAlign:"center" ,borderRadius:"5px",width:"30px",padding:"4px",height:"30px","&:hover":{backgroundColor:"#DB4444"} }}>
+        <Typography>L</Typography>
+    </Grid>
+    
+  </Grid>
+  </>
   )
 }
 
