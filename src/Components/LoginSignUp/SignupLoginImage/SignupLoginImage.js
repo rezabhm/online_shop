@@ -7,12 +7,12 @@ const SignupLoginImage = (props) => {
   return (
     <>
     <Grid container>
-        <Grid item xs={6}>
-    <img style={{width:"805px" ,height:"781px"}} src={props.img} />
-    </Grid>
-    </Grid>
+        <Grid item xs={12}>
 
-    <Footer/>
+            <img style={{width:"805px" ,height:"781px"}} src={props.img} />
+
+        </Grid>
+    </Grid>
 
     </>
   )

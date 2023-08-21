@@ -1,11 +1,11 @@
 import "./Title.css"
 
 
-function Title(){
+function Title(props){
     return(
         <>
 
-                <p className='title-home'>Today's </p>
+                <p className='title-home'>{props.title}</p>
         </>
     )
 }

@@ -4,8 +4,6 @@ import AdImageBox from "./AdImageBox";
 
 function AdDescriptionImage(props){
 
-    console.log(props.imageL.url)
-    console.log('result')
 
     return(
 

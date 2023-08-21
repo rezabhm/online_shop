@@ -7,32 +7,14 @@ import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import HeadsetOutlinedIcon from "@mui/icons-material/HeadsetOutlined";
 import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
 import SignButton from "./signButton";
-let category = [
-  {
-    id: 0,
-    icon: <PhoneAndroidOutlinedIcon />,
-    text: "Phones",
-    colors: "white",
-  },
-  { id: 1, icon: <ComputerOutlinedIcon />, text: "Computer", colors: "white" },
-  { id: 2, icon: <WatchOutlinedIcon />, text: "SmartWatch", colors: "white" },
-  { id: 3, icon: <CameraAltOutlinedIcon />, text: "Camera", colors: "white" },
-  { id: 4, icon: <HeadsetOutlinedIcon />, text: "HeadPhones", colors: "white" },
-  {
-    id: 5,
-    icon: <SportsEsportsOutlinedIcon />,
-    text: "Gaming",
-    colors: "white",
-  },
-];
 
-const CategorySignButton = () => {
-  const [colors, setColors] = useState(category);
+const CategorySignButton = (props) => {
+  const [colors, setColors] = useState(props.data);
 
   function changeBgColor(index) {
-    const newColor = colors.map((item) => {
+    const newColor = props.data.map((item) => {
       if (item.id === index) {
-        return { id: item.id, icon: item.icon, text: item.text, colors: "red" };
+        return { id: item.id, icon: item.icon, text: item.text, colors: "#DB4444" };
       } else {
         return {
           id: item.id,
@@ -48,7 +30,16 @@ const CategorySignButton = () => {
 
   return (
     <>
-      <Stack direction="row" spacing={2}>
+      <Stack direction="row" spacing={2}
+             sx={{
+
+               width:'103%',
+               height:'100%',
+
+
+             }}
+
+      >
         {colors.map((item) => {
           return (
             <SignButton

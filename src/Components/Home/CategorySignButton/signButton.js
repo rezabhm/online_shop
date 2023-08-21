@@ -6,13 +6,13 @@ const SignButton = (props) => {
     <Stack
       direction="column"
       sx={{
-        width: "170px",
+        width: "20%",
         height: "145px",
-        border: "2px solid gray",
+        border: "1px solid gray",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: "10px",
+        // borderRadius: "10px",
         cursor: "pointer",
         backgroundColor: props.bgColor,
       }}
@@ -23,14 +23,18 @@ const SignButton = (props) => {
       <Button
         disableRipple
         startIcon={props.icon}
-        size="5"
+        size="4"
         sx={{
           pb: 3,
 
           color: "#555",
           "& .MuiSvgIcon-root": { fontSize: "3.6rem" },
         }}
-      ></Button>
+      >
+
+          <></>
+
+      </Button>
       <Typography sx={{ pr: 1.5 }}>{props.text}</Typography>
     </Stack>
   );
