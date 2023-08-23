@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import * as React from "react";
 import {Visibility, VisibilityOff} from "@material-ui/icons";
+import ForgetPassword from "../ForgetPassword/ForgetPassword";
+import GoogleOAuth from "../SignupWithGoogle/SignupWithGoogle";
 
 export default function LoginForm() {
 
@@ -23,10 +25,11 @@ export default function LoginForm() {
         return (
             <>
 
-                <Grid container xs={12} spacing={2}>
+                <Grid container xs={12} spacing={3}>
 
                     <Grid item xs={12}>
                         <TextField
+
                             onChange={()=> ("Done PassWord")}
                             id="standard-basic"
                             label="UserName"
@@ -56,6 +59,12 @@ export default function LoginForm() {
                             />
                         </FormControl>
 
+                    </Grid>
+                    <Grid item xs={12}>
+                        <GoogleOAuth />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ForgetPassword />
                     </Grid>
                 </Grid>
 

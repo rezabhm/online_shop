@@ -4,7 +4,7 @@ import {Grid} from "@material-ui/core";
 function ForgetPassword(){
     return(
         <>
-            <Grid container xs={12}>
+            <Grid container xs={12} sx={{pt : "30px"}}>
 
                 <Grid item xs={6}>
                     <Button onChange={()=> ("Done Log In")} variant="contained" color="success">

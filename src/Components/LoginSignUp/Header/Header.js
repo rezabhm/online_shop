@@ -5,14 +5,15 @@ import SignupForm from "../SignupForm/SignupForm";
 const Header = (props) => {
   return (
     <Box
-      sx={{
-        width: "25%",
-      }}
+
     >
       <Box sx={{ pl: 2.4 }}>
         {" "}
         <Typography variant="h4" sx={{ pb: 1 }}>
           {props.title}
+        </Typography>
+        <Typography variant="h6" sx={{ pt: 1 }}>
+          {props.title1}
         </Typography>
         <Typography sx={{ color: props.status ? "black" : "red" }}>
           {props.errorText}
