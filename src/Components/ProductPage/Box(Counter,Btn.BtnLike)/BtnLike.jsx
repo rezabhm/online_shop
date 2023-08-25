@@ -28,7 +28,8 @@ const BtnLike = () => {
           borderColor: "gray",
           color: "gray",
           borderRadius: "0",
-          width: "100%",
+          width:'100px'
+          
         },
       }}
     >

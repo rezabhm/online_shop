@@ -63,8 +63,8 @@ const Counter = () => {
           <AddIcon />
         </Button>
       </Box>
-      <Shopping />
-      <BtnLike />
+      {/* <Shopping />
+      <BtnLike /> */}
     </section>
   );
 };

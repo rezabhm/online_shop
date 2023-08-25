@@ -9,7 +9,9 @@ const Shopping = () => {
       sx={{
         "&.MuiButtonBase-root": {
           borderRadius: "0",
-          width: "100%",
+          width:'200px',
+          marginRight:"15px"
+          
         },
       }}
     >

@@ -61,7 +61,7 @@ export default function LoginForm() {
 
                     </Grid>
                     <Grid item xs={12}>
-                        <GoogleOAuth />
+                        {/* <GoogleOAuth /> */}
                     </Grid>
                     <Grid item xs={12}>
                         <ForgetPassword />
