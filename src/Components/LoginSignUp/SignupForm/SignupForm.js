@@ -1,7 +1,8 @@
+import { Place } from "@mui/icons-material";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import React from "react";
-
-const SignupForm = () => {
+import SignupWithGoogle from "../SignupWithGoogle/SignupWithGoogle";
+const SignupForm = (style) => {
   const texFiled = [
     { id: 1, label: "Name", onchange: () => console.log("okay1") },
     { id: 2, label: "Last-Name", onchange: () => console.log("okay2") },
@@ -12,13 +13,15 @@ const SignupForm = () => {
     <>
       <Box
         sx={{
+          style,
           "& .MuiTextField-root": {
-            my: 2,
-            width: "24rem",
-          },
-          width: "24rem",
+            my: 2.6,
 
-          margin: "auto",
+            display: "flex",
+            width: "100%",
+          },
+
+          width: "27rem",
         }}
         noValidate
         autoComplete="off"
@@ -26,6 +29,7 @@ const SignupForm = () => {
         {texFiled.map((item) => {
           return (
             <TextField
+              sx={{ style, pb: 2 }}
               color="grey"
               label={item.label}
               variant="standard"
@@ -33,18 +37,25 @@ const SignupForm = () => {
             />
           );
         })}
-
+        <SignupWithGoogle />
         <Button
           variant="contained"
           color="error"
           sx={{
             width: "100%",
             marginTop: "15px",
+            mb: 2,
           }}
           onClick={console.log("click")}
         >
           <Typography sx={{ px: 2 }}>Creat Account </Typography>
         </Button>
+        <Typography sx={{ textAlign: "center", mb: 8 }}>
+          Already have account?{" "}
+          <span style={{ borderBottom: "1px solid black", marginLeft: "7px" }}>
+            Log in
+          </span>
+        </Typography>
       </Box>
     </>
   );
