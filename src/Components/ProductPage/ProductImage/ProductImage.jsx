@@ -5,6 +5,7 @@ import { imagelistData } from "./imgListData";
 import React from "react";
 import { useState } from "react";
 import Modal1 from "./Modal";
+import FiberManualRecordOutlinedIcon from '@mui/icons-material/FiberManualRecordOutlined';
 import ImageViewer from "../../Home/ImageViewer/ImageViewer";
 import {
   Avatar,
@@ -37,6 +38,31 @@ const style = {
   margin: "auto",
 };
 
+
+const Userbox =styled("box")(({theme})=>({
+
+ 
+  [theme.breakpoints.down("sm")]:{
+      display: "none"
+  }   
+  
+  }))
+
+  const IconBox=styled("box")(({theme})=>({
+    [theme.breakpoints.up("sm")]:{
+      display:"none"
+    }
+  }))
+
+  const ImageBox=styled("box")(({theme})=>({
+    [theme.breakpoints.down("sm")]:{
+      width:"100%",
+        marginLeft:"10%"
+    }
+  }))
+
+
+
 const ProductImage = (props) => {
   const [imgData, setImgData] = useState(imagelistData);
   let [open, setOpen] = useState(false);
@@ -68,33 +94,33 @@ const ProductImage = (props) => {
               display: "flex",
 
               justifyContent: "center",
+             
               alignItems: "center",
               margin: "auto",
+              flexDirection:"column"
             }}
           >
-            <Box sx={{ width: "100%", height: "300px" }}>
+            <ImageBox sx={{ width: "100%", height: "300px" }}>
               <img
                 onClick={() => setOpen(true)}
                 style={{ width: "100%", height: "100%" }}
                 src={props.mainImg}
               />
-            </Box>
+            </ImageBox>
+            <IconBox>
+              <FiberManualRecordOutlinedIcon  onClick={() => setOpen(true)} />
+              <FiberManualRecordOutlinedIcon onClick={() => setOpen(true)}/>
+              <FiberManualRecordOutlinedIcon onClick={() => setOpen(true)}/>
+            </IconBox>
           </Grid>
 
-          <Grid item>
-            <Box
-              sx={{
-                width: "100%",
-                "@media (max-width:600px)": {
-                  display: "flex",
-                  flexDirection: "row",
-                },
-              }}
-            >
+          <Grid item   >
+          
+            <Userbox>
               {imgData.map((item) => (
                 <ProductImgList key={item.id} {...item} />
               ))}
-            </Box>
+            </Userbox>
           </Grid>
         </Grid>
       </>

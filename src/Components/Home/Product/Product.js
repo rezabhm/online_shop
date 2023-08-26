@@ -1,94 +1,103 @@
 import React from "react";
-import {Card, CardActions, CardContent, CardMedia, Stack, Typography} from "@mui/material";
-import Rating from '@mui/material/Rating';
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Stack,
+  Typography,
+  Box
+} from "@mui/material";
+import Rating from "@mui/material/Rating";
 
-function Product(props){
+function Product(props) {
+  return (
+    <>
+      <Card
+        sx={{
+          width: "90%",
+          height: {xs:"80vh" , md:"60vh"},
+          
+          backgroundColor: "",
+        }}
+      >
+        <CardMedia
+          image={props.image}
+          title={"product "}
+          sx={{
+          
+            height: {xs:"65%",md:"65%"},
+            width: "100%",
+            marginBottom: "10px",
+            // border:'1px solid black'
+      
+          }}
+        />
 
+        <CardContent>
+          <Button
+            sx={{
+              backgroundColor: "black",
+              color: "#FFFFFF",
+              
+              width: "100%",
+              "&:hover": { backgroundColor: "red" },
+              marginBottom: "10px",
+            }}
+          >
+            Add To Cart
+          </Button>
+          <Typography variant={"h5"}>{props.title}</Typography>
+        </CardContent>
 
-    return(
+        <CardActions sx={{width:"100%"}}>
+            <Stack>
+          <Box>
+            <Typography
+              variant={"h6"}
+              sx={{
+                color: "red",
+               
+              }}
+            >
+              ${props.price}
+            </Typography>
+          </Box>
 
-        <>
+    
 
-            <Card sx={{
-
-                width:'100%',
-                height:'100%',
-                backgroundColor:'rgba(0,0,0,0.075)'
-
-            }}>
-
-                <CardMedia
-
-                    image={props.image}
-                    title={'product '}
-                    sx={{
-
-                        height:'75%',
-                        width:'100%',
-                        // border:'1px solid black'
-
-                    }}
-                />
-
-                <CardContent>
-
-                    <Typography variant={'h5'} >
-
-                        {props.title}
-
-                    </Typography>
-
-                </CardContent>
-
-                <CardActions sx={{
-
-                    width:'100%',
-                    height:'3%',
-
-                }}>
-
-                    <Typography variant={'h6'} sx={{
-
-                        color:'red',
-                        width:'25%',
-
-                    }} >${props.price}</Typography>
-
-
-                    <Stack sx={{
-
-                        width:'50%',
-
-                    }}>
-
-                        <Rating  name={'half-rating'} defaultValue={props.stars} precision={0.5} readOnly />
-
-                    </Stack>
-
-                    <Typography variant={'h6'} sx={{
-
-                        width:'25%'
-
-                    }}>
-
-                        {props.rateNumber}
-
-                    </Typography>
+         
 
 
-                </CardActions>
-
-
-            </Card>
-
-
-
-        </>
-
-
-
-    )
-
-
+                <Box
+            sx={{
+              
+              display:"flex"
+            }}
+          >
+          <Box sx={{marginRight:"8px"}}>
+            <Rating
+              name={"half-rating"}
+              defaultValue={props.stars}
+              precision={0.5}
+              readOnly
+            />
+            </Box>
+            <Box> <Typography
+            variant={"h6"}
+            sx={{
+            
+            }}
+          >
+            {props.rateNumber}
+          </Typography></Box>
+          </Box>
+          </Stack>
+        </CardActions>
+      
+      </Card>
+    </>
+  );
 }
 export default Product;

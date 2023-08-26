@@ -20,7 +20,7 @@ export default function Colours() {
 
     return (
 
-           <Grid container xs={12}>
+           <Grid container xs={12} sx={{width:"200px",display:"flex",alignItems:"center"}}>
                 <Grid item xs={6}>
 
 
