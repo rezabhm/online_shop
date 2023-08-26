@@ -2,6 +2,7 @@ import { Place } from "@mui/icons-material";
 import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import React from "react";
 import SignupWithGoogle from "../SignupWithGoogle/SignupWithGoogle";
+import Header from "../Header/Header";
 const SignupForm = (style) => {
   const texFiled = [
     { id: 1, label: "Name", onchange: () => console.log("okay1") },
@@ -20,12 +21,17 @@ const SignupForm = (style) => {
             display: "flex",
             width: "100%",
           },
-
+          mt:10,
           width: "27rem",
         }}
         noValidate
         autoComplete="off"
       >
+        <Header
+          title={"Create an account"}
+          title1={"Enter youre details below"}
+        />
+
         {texFiled.map((item) => {
           return (
             <TextField

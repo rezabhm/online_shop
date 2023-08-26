@@ -23,6 +23,7 @@ const signupPAge = () => {
         >
           <Grid item xs={12} sm={12} md={7} xl={6}>
             <SignupLoginImage />
+            
           </Grid>
           <Grid
             item

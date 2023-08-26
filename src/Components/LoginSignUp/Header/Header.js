@@ -4,23 +4,19 @@ import SignupForm from "../SignupForm/SignupForm";
 
 const Header = (props) => {
   return (
-    <Box
-
-    >
-      <Box sx={{ pl: 2.4 }}>
+    <Box>
+      <Box sx={{  }}>
         {" "}
         <Typography variant="h4" sx={{ pb: 1 }}>
           {props.title}
         </Typography>
-        <Typography variant="h6" sx={{ pt: 1 }}>
+        <Typography variant="body2" sx={{ pt: 1 }}>
           {props.title1}
         </Typography>
         <Typography sx={{ color: props.status ? "black" : "red" }}>
           {props.errorText}
         </Typography>
       </Box>
-
-      
     </Box>
   );
 };
