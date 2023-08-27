@@ -17,7 +17,7 @@ function Login() {
   };
 
   return (
-    <Box sx={{ overflowX: "hidden" }}>
+    <Box >
       <NavBar />
 
       <Container maxWidth={"xl"} sx={{ marginBottom: "20px" }}>

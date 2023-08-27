@@ -15,7 +15,7 @@ import LoginForm from "../Components/LoginSignUp/LoginForm/LoginForm";
 
 const signupPAge = () => {
   return (
-    <Box sx={{ overflowX: "hidden" }}>
+    <Box >
       <NavBar />
 
       <Container maxWidth={"xl"}>

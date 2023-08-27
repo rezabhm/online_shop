@@ -16,8 +16,8 @@ function NavBar() {
   return (
     <Grid
       container
-      spacing={3}
-      style={{ borderBottom: "1px solid rgba(0,0,0,0.5)", marginTop: "1px" }}
+      spacing={2}
+      style={{ borderBottom: "1px solid rgba(0,0,0,0.5)", marginTop: "1px",padding:"5px 0" }}
     >
       <Grid item xs={1} style={styled}>
         <></>

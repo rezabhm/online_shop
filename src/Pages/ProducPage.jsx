@@ -23,16 +23,38 @@ const Maingrid = styled("grid")(({ theme }) => ({
 
   [theme.breakpoints.down("sm")]: {
     height: "70vh",
-    width: "100vw",
-    marginBottom: "90px",
+    width: "100vh",
+    marginBottom: "15%",
+  },
+
+  "@media (min-width:900px) and (max-width:1287px)": {
+    marginRight: "3%",
+    marginBottom: "15%",
+  },
+  "@media (min-width:600px) and (max-width:900px)": {
+    marginRight: "25%",
+    marginBottom: "30%",
+  },
+  "@media(max-width:460px)": {
+    marginBottom: "30%",
+  },
+  "@media (min-width:600px) and (max-width:715px)": {
+    margin: "20%",
   },
 }));
 export const ProducPage = () => {
   return (
-    <>
+    <Box >
       <NavBar />
 
-      <Container maxWidth={"xl"}>
+      <Container
+        maxWidth={"xl"}
+        sx={{
+          "@media (max-width:340px)": {
+            marginBottom: "20%",
+          },
+        }}
+      >
         <Grid container sx={{ marginTop: "7%" }}>
           <Grid item xs={12} sm={12} md={7}>
             <ProductImage
@@ -151,7 +173,7 @@ export const ProducPage = () => {
         </Grid>
       </Container>
 
-      <Footer />
-    </>
+       <Footer /> 
+    </Box>
   );
 };
