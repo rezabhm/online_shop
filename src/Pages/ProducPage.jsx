@@ -22,8 +22,8 @@ export const ProducPage = () => {
     <>
       <NavBar />
 
-      <Grid container sx={{ marginTop: "7%" }}>
-        <Grid sx={{ display: "flex" }}>
+      <Container maxWidth={"xl"}>
+        <Grid container sx={{ marginTop: "7%" }}>
           <Grid item xs={12} sm={12} md={7} xl={6}>
             <ProductImage
               mainImg={
@@ -32,7 +32,7 @@ export const ProducPage = () => {
             />
           </Grid>
 
-          <Grid xs={12} sm={12} md={5} xl={6}>
+          <Grid xs={12} sm={12} md={4} xl={6} sx={{ mt: 10 }}>
             <Box sx={{ marginBottom: "10px" }}>
               <ProductHeader />
             </Box>
@@ -64,21 +64,29 @@ export const ProducPage = () => {
             </Box>
             <Box>
               <Feature
-              Ficon={<CarCrash/>}
-              Ftitle={'Free Delivery'}
-              FDesc={'etetgregyryhrhyrhrhj  eteyey'}
-              Sicon={<CatchingPokemon/>}
-              Stitle={' Refresh Delivery'}
-              SDesc={'gdhdhfhfd h srethyrthrhr'}
+                Ficon={<CarCrash />}
+                Ftitle={"Free Delivery"}
+                FDesc={"etetgregyryhrhyrhrhj  eteyey"}
+                Sicon={<CatchingPokemon />}
+                Stitle={" Refresh Delivery"}
+                SDesc={"gdhdhfhfd h srethyrthrhr"}
               />
             </Box>
           </Grid>
         </Grid>
 
-        <Grid container sx={{ marginTop: "10%",marginBottom:"10%" }}>
+        <Grid container sx={{ marginTop: "10%", marginBottom: "10%" }}>
           <Title title={"Related Item"} />
 
-          <Grid  sx={{height:"50vh", display: "flex" ,marginTop:"6%",justifyContent:"space-around",width:"100%"}}>
+          <Grid
+            sx={{
+              height: "50vh",
+              display: "flex",
+              marginTop: "6%",
+              justifyContent: "space-around",
+              width: "100%",
+            }}
+          >
             <Grid xs={12} sm={12} md={3} xl={4}>
               <Product
                 image={
@@ -93,47 +101,44 @@ export const ProducPage = () => {
 
             <Grid xs={12} sm={12} md={3} xl={4}>
               <Product
-                 image={'https://dkstatics-public.digikala.com/digikala-products/2eecca1433de7975e17cb014f7fd52ea1fcb1391_1672484382.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90'}
-                 title={'Mobile'}
-                 price={250}
-                 star={3.5}
-                 rateNumber={50}
-
+                image={
+                  "https://dkstatics-public.digikala.com/digikala-products/2eecca1433de7975e17cb014f7fd52ea1fcb1391_1672484382.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                }
+                title={"Mobile"}
+                price={250}
+                star={3.5}
+                rateNumber={50}
               />
             </Grid>
 
-
-
             <Grid xs={12} sm={12} md={3} xl={4}>
               <Product
-                 image={'https://dkstatics-public.digikala.com/digikala-products/020e3fa8992d67c365e64db17c3558e20ada81c8_1635154901.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90'}
-                 title={'Tala'}
-                 price={1500}
-                 star={5}
-                 rateNumber={250}
+                image={
+                  "https://dkstatics-public.digikala.com/digikala-products/020e3fa8992d67c365e64db17c3558e20ada81c8_1635154901.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                }
+                title={"Tala"}
+                price={1500}
+                star={5}
+                rateNumber={250}
               />
             </Grid>
 
-
-
-
             <Grid xs={12} sm={12} md={3} xl={4}>
               <Product
-               image={'https://dkstatics-public.digikala.com/digikala-products/c34c67f153547c2a5e7092cb83a83f36b1e78794_1658835829.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90'}
-               title={'chador'}
-               price={75}
-               star={1}
-               rateNumber={10}
+                image={
+                  "https://dkstatics-public.digikala.com/digikala-products/c34c67f153547c2a5e7092cb83a83f36b1e78794_1658835829.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+                }
+                title={"chador"}
+                price={75}
+                star={1}
+                rateNumber={10}
               />
             </Grid>
           </Grid>
         </Grid>
-        
-      </Grid>
+      </Container>
 
-      <Footer/>
-
-      
+      <Footer />
     </>
   );
 };
