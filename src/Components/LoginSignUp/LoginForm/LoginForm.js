@@ -9,6 +9,7 @@ import * as React from "react";
 import {Visibility, VisibilityOff} from "@material-ui/icons";
 import ForgetPassword from "../ForgetPassword/ForgetPassword";
 import GoogleOAuth from "../SignupWithGoogle/SignupWithGoogle";
+import Header from "../Header/Header";
 
 export default function LoginForm() {
 
@@ -25,8 +26,12 @@ export default function LoginForm() {
         return (
             <>
 
-                <Grid container xs={12} spacing={3}>
+                <Grid container xs={12} spacing={3} sx={{padding:"60px"}}>
+                    <Header
+                        title={"Log in to Exclusive"}
+                        title1={"Enter your details below"}
 
+                    />
                     <Grid item xs={12}>
                         <TextField
 
@@ -40,7 +45,7 @@ export default function LoginForm() {
 
                     <Grid item xs={12}>
 
-                        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
+                        <FormControl sx={{ m: 1, width: '100%'  }} variant="standard">
                             <InputLabel onChange={()=> ("Done PassWord")} htmlFor="standard-adornment-password">PassWord</InputLabel>
                             <Input
                                 id="standard-adornment-password"
@@ -61,7 +66,7 @@ export default function LoginForm() {
 
                     </Grid>
                     <Grid item xs={12}>
-                        {/* <GoogleOAuth /> */}
+                         <GoogleOAuth />
                     </Grid>
                     <Grid item xs={12}>
                         <ForgetPassword />
