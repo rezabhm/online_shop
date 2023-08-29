@@ -1,6 +1,13 @@
 import React from "react";
 import NavBar from "../Components/Home/Navbar/NavBar";
-import { Button, Container, Grid, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 import SignupLoginImage from "../Components/LoginSignUp/SignupLoginImage/SignupLoginImage";
 import Footer from "../Components/Home/Footer/Footer";
 import SignupForm from "../Components/LoginSignUp/SignupForm/SignupForm";
@@ -8,7 +15,7 @@ import LoginForm from "../Components/LoginSignUp/LoginForm/LoginForm";
 
 const signupPAge = () => {
   return (
-    <>
+    <Box sx={{ overflowX: "hidden" }}>
       <NavBar />
 
       <Container maxWidth={"xl"}>
@@ -23,7 +30,6 @@ const signupPAge = () => {
         >
           <Grid item xs={12} sm={12} md={7} xl={6}>
             <SignupLoginImage />
-            
           </Grid>
           <Grid
             item
@@ -43,7 +49,7 @@ const signupPAge = () => {
       </Container>
 
       <Footer />
-    </>
+    </Box>
   );
 };
 
