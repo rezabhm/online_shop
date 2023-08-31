@@ -158,9 +158,9 @@ function Account(){
                                         <BootstrapInput placeholder="Confirm New Password" id="bootstrap-input" sx={{width:"77%",margin:"10px 60px"}} />
                                     </Grid>
                                 </Grid>
-                                <Grid container xs={12} direction="row" sx={{paddingLeft:"400px"}} >
+                                <Grid container xs={12} direction="row" sx={{paddingLeft:"390px"}} >
 
-                                        <Typography textAlign="center">
+                                        <Typography margin="5px 5px">
                                             Cancel
                                         </Typography>
 
