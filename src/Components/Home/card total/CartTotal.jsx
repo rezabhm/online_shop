@@ -1,16 +1,17 @@
+catTotal
 import {Grid, Typography} from "@mui/material";
 import {Box} from "@mui/system";
 
 function CartTotal(props){
     return(
         <>
-            <Box  sx={{border:"1px solid #000" , width:"470px",height:"324" , padding:"20px", }}>
+            <Box  sx={{border:"1px solid #000" , width:"470px",height:"324" , padding:"20px"}}>
 
                 <Typography variant="h5" sx={{padding:"5px"}}>
                     Cart Total
                 </Typography>
 
-                    <Box  sx={{borderBottom:"1px solid black",paddingTop:"20px", display:"flex",justifyContent:'space-between',width:'100%'}}>
+                    <Box  sx={{paddingTop:"20px", display:"flex",justifyContent:'space-between',}}>
 
                          <Typography >
                              Subtotal:
@@ -20,16 +21,18 @@ function CartTotal(props){
                          </Typography>
 
                     </Box>
-                    <Box >
-                        <Typography  sx={{borderBottom:"1px solid black" , paddingTop:"20px",display:"flex",justifyContent:'space-between',width:'100%'}}>
+                    <hr />
+                    <Box sx={{paddingTop:"20px", display:"flex",justifyContent:'space-between',}} >
+                        <Typography  >
                             Shipping:
                         </Typography>
                         <Typography>
                             {props.ship}
                         </Typography>
                     </Box>
-                    <Box >
-                        <Typography  sx={{borderBottom:"1px solid black" , paddingTop:"20px",display:"flex",justifyContent:'space-between',width:'100%'}}>
+                    <hr />
+                    <Box sx={{paddingTop:"20px", display:"flex",justifyContent:'space-between'}} >
+                        <Typography  >
                             Total:
                         </Typography>
                         <Typography>
@@ -41,5 +44,3 @@ function CartTotal(props){
         </>
     )
 }
-
-export default CartTotal
