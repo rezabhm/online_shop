@@ -1,10 +1,10 @@
 import { Container } from '@mui/system'
 import React from 'react'
 import NavBar from '../Components/Home/Navbar/NavBar'
-import { CartTable } from '../Components/Cart/CartTable/Table'
+import {CartTable} from '../Components/Cart/CartTable'
 import { Grid } from '@mui/material'
 import {Box} from '@mui/material'
-import CartButton from '../Components/Cart/CartButton/CartButton'
+import CartButton from '../Components/Cart/CartButton'
 import Coupon from '../Components/coupon/Coupon'
 import CartTotal from '../Components/Home/card total/CartTotal'
 

@@ -1,4 +1,4 @@
-catTotal
+
 import {Grid, Typography} from "@mui/material";
 import {Box} from "@mui/system";
 
@@ -44,3 +44,5 @@ function CartTotal(props){
         </>
     )
 }
+
+export default CartTotal
