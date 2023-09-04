@@ -1,8 +1,8 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
 
-const ProductHeader = () => {
-  return <Typography style={{fontWeight:"bold"}}>Havic HV G-92 Gamepad</Typography>;
+const ProductHeader = (props) => {
+  return <Typography variant="h4" style={{fontWeight:"bold"}}>{props.title}</Typography>;
 };
 
 export default ProductHeader;
