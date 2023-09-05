@@ -5,17 +5,23 @@ import IconButton from "@mui/material/IconButton";
 import FilledInput from "@mui/material/FilledInput";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
-
 import TextField from "@mui/material/TextField";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import { Padding } from "@mui/icons-material";
+
 const EditProfile = () => {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+  const [showPassword2, setShowPassword2] = React.useState(false);
+
+  const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
+
+  const handleMouseDownPassword2 = (event) => {
     event.preventDefault();
   };
   return (
@@ -132,16 +138,16 @@ const EditProfile = () => {
             <FilledInput
               placeholder="Confirm New Password"
               id="filled-adornment-password"
-              type={showPassword ? "text" : "password"}
+              type={showPassword2 ? "text" : "password"}
               endAdornment={
                 <InputAdornment position="end">
                   <IconButton
                     aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
+                    onClick={handleClickShowPassword2}
+                    onMouseDown={handleMouseDownPassword2}
                     edge="end"
                   >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                    {showPassword2 ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
                 </InputAdornment>
               }
