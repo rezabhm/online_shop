@@ -1,11 +1,5 @@
-import { Button, Stack, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import PhoneAndroidOutlinedIcon from "@mui/icons-material/PhoneAndroidOutlined";
-import ComputerOutlinedIcon from "@mui/icons-material/ComputerOutlined";
-import WatchOutlinedIcon from "@mui/icons-material/WatchOutlined";
-import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
-import HeadsetOutlinedIcon from "@mui/icons-material/HeadsetOutlined";
-import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
+import { Grid } from "@mui/material";
+import React, { useState } from "react";
 import SignButton from "./signButton";
 
 const CategorySignButton = (props) => {
@@ -14,13 +8,32 @@ const CategorySignButton = (props) => {
   function changeBgColor(index) {
     const newColor = props.data.map((item) => {
       if (item.id === index) {
-        return { id: item.id, icon: item.icon, text: item.text, colors: "#DB4444" };
+        return {
+          id: item.id,
+          icon: item.icon,
+          icon2: item.icon2,
+          text: item.text,
+          colors: "#DB4444",
+          colorBtn: item.colorBtn2,
+          title: item.title,
+          iconBg: item.iconBg2,
+          iconColor: item.iconColor2,
+          iconBoxSh: item.iconBoxSh2,
+          textColor: item.textColor2,
+        };
       } else {
         return {
           id: item.id,
           icon: item.icon,
+          icon2: item.icon2,
           text: item.text,
           colors: "white",
+          title: item.title,
+          iconBg: item.iconBg,
+          iconColor: item.iconColor,
+          iconBoxSh: item.iconBoxSh,
+          textColor: item.textColor,
+          colorBtn: item.colorBtn,
         };
       }
     });
@@ -30,29 +43,34 @@ const CategorySignButton = (props) => {
 
   return (
     <>
-      <Stack direction="row" spacing={2}
-             sx={{
-
-               width:'103%',
-               height:'100%',
-
-
-             }}
-
-      >
+      <Grid container>
         {colors.map((item) => {
           return (
-            <SignButton
-              icon={item.icon}
-              text={item.text}
-              bgColor={item.colors}
-              bgColorChange={() => {
-                changeBgColor(item.id);
-              }}
-            />
+            <Grid
+              xs={12}
+              sm={12}
+              md={2}
+              sx={{ px: 3, py: { xs: "10px", md: "0" } }}
+            >
+              <SignButton
+                icon={item.icon}
+                icon2={item.icon2}
+                iconBg={item.iconBg}
+                text={item.text}
+                bgColor={item.colors}
+                colorBtn={item.colorBtn}
+                iconColor={item.iconColor}
+                title={item.title}
+                iconBoxSh={item.iconBoxSh}
+                textColor={item.textColor}
+                bgColorChange={() => {
+                  changeBgColor(item.id);
+                }}
+              />
+            </Grid>
           );
         })}
-      </Stack>
+      </Grid>
     </>
   );
 };
