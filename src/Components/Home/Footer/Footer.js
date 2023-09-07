@@ -24,13 +24,13 @@ function Footer(){
     return(
 
 
-                    <Grid container sx={{bgcolor:"#111",padding:"100px"
+                    <Grid container sx={{bgcolor:"#3c3b3b",padding:"100px", height:"auto"
 
-                    }} spacing={0}>
-                        <Grid container xs={2}>
+                    }} spacing={1.5}>
+                        <Grid container xs={12} sm={6} md={6} lg={6} xl={2} mb="20px" >
 
                             <Grid item xs={12}>
-                                <Typography variant="h3" component="h2" sx={{color:"#fff"}}>
+                                <Typography variant="h3" sx={{color:"#fff"}}>
                                     Exclusive
                                 </Typography>
                             </Grid>
@@ -75,10 +75,10 @@ function Footer(){
 
 
 
-                        <Grid container xs={2}>
+                        <Grid container xs={12} sm={6} md={6} lg={6} xl={2}>
 
                             <Grid item xs={12}>
-                                <Typography variant="h4" component="h2" sx={{color:"#fff"}}>
+                                <Typography variant="h4" component="h2" sx={{color:"#fff" , marginLeft:{sx:"5px"}}}>
                                     Support
                                 </Typography>
                             </Grid>
@@ -98,7 +98,7 @@ function Footer(){
                         </Grid>
 
 
-                        <Grid container xs={2} spacing={0}>
+                        <Grid container xs={12} sm={6} md={6} lg={6} xl={2} spacing={0}>
 
                             <Grid item xs={12} >
                                 <Typography variant="h4" component="h2" sx={{color:"#fff"}}>
@@ -128,9 +128,9 @@ function Footer(){
                         </Grid>
 
 
-                        <Grid container xs={2}>
+                        <Grid container xs={12} sm={6} md={6} lg={6} xl={2}>
 
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sx={{ml:{xs:"5%"}}}>
                                 <Typography variant="h4" component="h2" sx={{color:"#fff"}}>
                                     Quick Link
                                 </Typography>
@@ -154,7 +154,7 @@ function Footer(){
                         </Grid>
 
 
-                        <Grid container xs={4}   spacing={2}>
+                        <Grid container xs={12} sm={12} md={12} lg={12} xl={4} sx={{width:{md:"100%" , lg:"100%" , xl:"100%"}}}   spacing={2}>
 
                             <Grid item xs={12}>
                                 <Typography variant="h4" component="h2" sx={{color:"#fff"}}>
@@ -169,7 +169,7 @@ function Footer(){
                             <Grid container xs={12}>
 
                                 <Grid item xs={6}>
-                                    <QrCode2Icon sx={{fontSize: 100, width:'100%', height:'100%'}} color="warning" />
+                                    <QrCode2Icon sx={{fontSize: 100, width:'100%', height:'100%' ,}} color="action" />
                                 </Grid>
 
                                 <Grid item xs={6}>
@@ -187,22 +187,22 @@ function Footer(){
 
                             </Grid>
 
-                            <Grid container xs={12}>
+                            <Grid container xs={12} sm={5} md={4} lg={4} xl={8}>
 
                                 <Grid item xs={3}>
-                                    <InstagramIcon fontSize="large" color="warning"/>
+                                    <InstagramIcon fontSize="large" color="action" />
                                 </Grid>
 
                                 <Grid item xs={3}>
-                                    <TwitterIcon fontSize="large" color="warning"/>
+                                    <TwitterIcon fontSize="large" color="action"/>
                                 </Grid>
 
                                 <Grid item xs={3}>
-                                    <FacebookIcon fontSize="large" color="warning"/>
+                                    <FacebookIcon fontSize="large" color="action"/>
                                 </Grid>
 
                                 <Grid item xs={3}>
-                                    <LinkedInIcon fontSize="large" color="warning"/>
+                                    <LinkedInIcon fontSize="large" color="action"/>
                                 </Grid>
 
                             </Grid>
