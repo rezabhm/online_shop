@@ -20,7 +20,7 @@ const AboutSlider = (props) => {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             component="img"
-            height="194px"
+            height="250px"
             image={props.img}
             alt="Paella dish"
           />

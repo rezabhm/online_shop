@@ -129,7 +129,17 @@ const About = () => {
           <Grid container sx={{ my: 20 }}>
             {imgData.map((item) => {
               return (
-                <Grid xs={12} sm={12} md={4}>
+                <Grid
+                  xs={12}
+                  sm={12}
+                  md={4}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    my: 3,
+                    px: { md: "12px" },
+                  }}
+                >
                   <AboutSlider
                     img={item.img}
                     name={item.name}

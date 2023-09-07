@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 const AboutHeaderDesc = (props) => {
   return (
     <>
-      <Box sx={{ width: "100%", height: "373px", textAlign: "justify" }}>
+      <Box sx={{ width: "100%", height: "100%" }}>
         <Box sx={{ mb: "5%" }}>
           <ProductHeader title={props.title} />
         </Box>
