@@ -189,7 +189,7 @@ function Footer(){
 
                             <Grid container xs={12} sm={5} md={4} lg={4} xl={8}>
 
-                                <Grid item xs={3}>
+                                <Grid item xs={3} sx={{m:"1px"}}>
                                     <InstagramIcon fontSize="large" color="action" />
                                 </Grid>
 
