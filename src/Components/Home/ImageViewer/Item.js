@@ -5,14 +5,14 @@ const Item = (props) => {
 
 
   return (
-      <Box sx={{height:'100%', position:'relative'}}>
+     <Box sx={{"@media (max-width:900px)":{width:"100%"}}}>
         <img
           src={props.item}
           alt=""
-          style={{ width: "100%", height:'100%' }}
+          style={{ width: "100%", height:'20%', }}
         />
-
-      </Box>
+</Box>
+   
 
   );
 };

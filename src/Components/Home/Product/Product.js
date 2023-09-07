@@ -26,16 +26,7 @@ function Product(props) {
           },
         }}
       >
-        {/* <CardMedia
-          image={props.image}
-          title={"product "}
-          sx={{
-            height: "100%",
-            width: "100%",
-            marginBottom: "10px",
-            // border:'1px solid black'
-          }}
-        /> */}
+
         <Box>
           <img
             style={{ height: "100%", width: "100%", marginBottom: "10px" }}

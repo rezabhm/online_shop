@@ -7,6 +7,7 @@ import {Box} from '@mui/material'
 import CartButton from '../Components/Cart/CartButton'
 import Coupon from '../Components/coupon/Coupon'
 import CartTotal from '../Components/Home/card total/CartTotal'
+import Footer from '../Components/Home/Footer/Footer'
 
 
 
@@ -56,7 +57,13 @@ const Cart = () => {
        
         </Grid>
         </Grid>
+
+       
     </Container>
+
+    <Footer/>
+
+    
     </>
   )
 }

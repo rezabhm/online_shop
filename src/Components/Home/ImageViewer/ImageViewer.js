@@ -4,28 +4,27 @@ import Item from "./Item";
 import { Box } from "@material-ui/core";
 const ImageViewer = (props) => {
   return (
-    <Box sx={{ width: "95%", height: "95%" }}>
+    <Box sx={{ width:"892px", height: "490px" , border:"1px"}}>
       <Carousel
         navButtonsProps={{
           // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
           style: {
-            backgroundColor: "cornflowerblue",
+            backgroundColor: "gray",
             borderRadius: 0,
+            display:"block"
           },
         }}
         indicatorIconButtonProps={{
           style: {
-            zIndex: "3",
+            zIndex: "900",
             bottom: "50px",
             color: "gray",
-            " @media(max-width:1400px)": {
-              bottom: "100px",
-            },
+           
           },
         }}
         activeIndicatorIconButtonProps={{
           style: {
-            color: "#DB4444",
+            color: "red",
             backgroundColor: "white", // 2
           },
         }}
