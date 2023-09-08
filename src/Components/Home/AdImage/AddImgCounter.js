@@ -4,17 +4,9 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 
 const AddImgCounter = (props) => {
-  console.log(props.data.minute);
-  const CircleBox = styled(Box)({
-    borderRadius: "50%",
-    backgroundColor: "#FFFFFF",
-    width: "100%",
-    height: "100%",
 
-    border: "5px dotted white",
-  });
 
-  // if (props.type === "counter") {
+
   return (
     <>
       <Grid container>
@@ -23,21 +15,22 @@ const AddImgCounter = (props) => {
           xs={2}
           sx={{
             textAlign: "center",
-            lineHeight:"70px",
+       
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
             display: "flex",
             borderRadius: "50%",
             backgroundColor: "#FFFFFF",
-            margin: "10px",
+            margin: "2%",
             border: "5px solid black",
-            width:"40px",
+            width:"5%",
+            
             height:"70px",
             position:"relative"
           }}
         >
-          <Grid item xs={12}sx={{  display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}} >
+          <Grid item xs={12}sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column"}} >
             <Typography sx={{ fontWeight: "bold" }}>{props.data.day}</Typography>
             <Typography>{props.data.textdays}</Typography>
           </Grid>
@@ -48,15 +41,17 @@ const AddImgCounter = (props) => {
           xs={2}
           sx={{
             textAlign: "center",
+       
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
             display: "flex",
             borderRadius: "50%",
             backgroundColor: "#FFFFFF",
-            margin: "10px",
+            margin: "2%",
             border: "5px solid black",
-            width:"40px",
+            width:"5%",
+            
             height:"70px",
             position:"relative"
           }}
@@ -72,15 +67,17 @@ const AddImgCounter = (props) => {
           xs={2}
           sx={{
             textAlign: "center",
+       
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
             display: "flex",
             borderRadius: "50%",
             backgroundColor: "#FFFFFF",
-            margin: "10px",
+            margin: "2%",
             border: "5px solid black",
-            width:"40px",
+            width:"5%",
+            
             height:"70px",
             position:"relative"
           }}
@@ -96,17 +93,18 @@ const AddImgCounter = (props) => {
           xs={2}
           sx={{
             textAlign: "center",
+       
             alignItems: "center",
             justifyContent: "center",
             flexDirection: "column",
             display: "flex",
             borderRadius: "50%",
             backgroundColor: "#FFFFFF",
-            margin: "10px",
+            margin: "2%",
             border: "5px solid black",
-            width:"40px",
+            width:"5%",
+            
             height:"70px",
-            Padding:"10px",
             position:"relative"
           }}
         >

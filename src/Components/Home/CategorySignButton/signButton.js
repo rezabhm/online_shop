@@ -6,13 +6,13 @@ const SignButton = (props) => {
     <Stack
       direction="column"
       sx={{
-        width: "20%",
-        height: "145px",
+        width: "100%",
+        height: "170px",
         border: "1px solid gray",
-        display: "flex",
+        padding: 1.5,
         justifyContent: "center",
         alignItems: "center",
-        // borderRadius: "10px",
+
         cursor: "pointer",
         backgroundColor: props.bgColor,
       }}
@@ -25,17 +25,65 @@ const SignButton = (props) => {
         startIcon={props.icon}
         size="4"
         sx={{
-          pb: 3,
+          pt: 6,
 
-          color: "#555",
+          pl: 1,
+          color: props.colorBtn,
+
           "& .MuiSvgIcon-root": { fontSize: "3.6rem" },
         }}
+      ></Button>
+      <div
+        disableRipple
+        style={{
+          backgroundColor: props.iconBg,
+          boxShadow: props.iconBoxSh,
+          borderRadius: "50%",
+          width: "70px",
+          height: "60px",
+        }}
       >
+        <Button
+          disableRipple
+          startIcon={props.icon2}
+          size="2"
+          sx={{
+            pt: 0.5,
+            pb: 2.4,
+            pl: 1.9,
+            color: props.iconColor,
 
-          <></>
+            "& .MuiSvgIcon-root": { fontSize: "3rem" },
+          }}
+        ></Button>
+      </div>
 
-      </Button>
-      <Typography sx={{ pr: 1.5 }}>{props.text}</Typography>
+      <Typography
+        sx={{
+          pr: 1.5,
+          pl: 1.5,
+          pb: 0.5,
+          pt: 2,
+          fontWeight: "700",
+          fontSize: "25px",
+          color: props.textColor,
+        }}
+      >
+        {props.title}
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          pr: 1.7,
+          pl: 1,
+          pb: 4,
+          color: props.textColor,
+          width: { xs: "100%", md: "70%", lg: "100%" },
+          textAlign: "center",
+        }}
+      >
+        {props.text}
+      </Typography>
     </Stack>
   );
 };

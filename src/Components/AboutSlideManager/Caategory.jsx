@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import SignButton from "./signButton";
+import SignButton from "../Home/CategorySignButton/signButton";
 
-const CategorySignButton = (props) => {
+const CategoryAbout = (props) => {
   const [colors, setColors] = useState(props.data);
 
   function changeBgColor(index) {
@@ -49,7 +49,7 @@ const CategorySignButton = (props) => {
             <Grid
               xs={12}
               sm={12}
-              md={2}
+              md={3}
               sx={{ px: 3, py: { xs: "10px", md: "0" } }}
             >
               <SignButton
@@ -75,4 +75,4 @@ const CategorySignButton = (props) => {
   );
 };
 
-export default CategorySignButton;
+export default CategoryAbout;

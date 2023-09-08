@@ -15,7 +15,7 @@ import {
   import Rating from "@mui/material/Rating";
 
 export const WhishList = (props) => {
-    console.log(props.WhishlistItems.WhishlistItems);
+
   return (
     <>
    

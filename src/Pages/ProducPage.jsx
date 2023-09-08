@@ -32,7 +32,7 @@ const Maingrid = styled("grid")(({ theme }) => ({
     marginBottom: "15%",
   },
   "@media (min-width:600px) and (max-width:900px)": {
-    marginRight: "25%",
+
     marginBottom: "30%",
   },
   "@media(max-width:460px)": {

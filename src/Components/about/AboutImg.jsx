@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const AboutImg = (props) => {
   return (
-<>
-<img src={props.img} style={{width:"600px",height:"609px"}}  />
-</>
-  )
-}
+    <>
+      <img src={props.img} style={{ width: "100%", height: "100%" }} />
+    </>
+  );
+};
 
-export default AboutImg
+export default AboutImg;
