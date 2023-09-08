@@ -68,16 +68,70 @@ const [showlist,setShowlist]=useState(false)
     return(
 
         <>
+
+<NavBar/>
  <Container  maxWidth={"xl"}
         sx={{
           "@media (max-width:340px)": {
             marginBottom: "20%",
           },
         }}>
+
+<Grid sx={{mb:"3%"}} container>
+
+<Box sx={{position:'relative'}}>
+{showlist ?     <Grid md={6} sm={6}  item   sx={{height:"350px",width:{sm:"50%",xs:"50%"},mt:"4%",ml:'3%',zIndex:"1000"}}>
+
+<CategoryList data={Cdate}/>
+</Grid>  :<Grid sx={{display:{sm:"none",md:"flex",xs:"none"}}}><CategoryList data={Cdate}/> </Grid>}
+{showlist?  <ArrowCircleLeftIcon onClick={()=>setShowlist(false)} sx={{display:{md:"none"},color:"purple", position:"absolute",top:"80px",fontSize:"40px",cursor:"pointer"}}/> :<ArrowCircleRightIcon onClick={()=>setShowlist(true)} sx={{display:{sm:"flex" , md:"none"},position:"absolute",top:"80px",fontSize:"40px",cursor:"pointer",color:"purple"}}/>}
+
+</Box>  
+
+
+{showlist ? <Grid   sm={6} md={6}  item sx={{width:{sm:"50%",xs:"50%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"0","@media(max-width:400px)":{marginLeft:'50px'}}}>
+<ImageViewer images={[
+
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
+'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
+'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
+'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
+
+
+
+]} />
+
+</Grid> :<Grid   sm={6} md={6}  item sx={{width:{sm:"50%",xs:"100%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"1","@media(max-width:400px)":{marginLeft:'50px'}}}>
+<ImageViewer images={[
+
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
+'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
+'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
+'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
+
+
+
+]} />
+
+</Grid>}
+
+
+</Grid>
+
+
+
+
             
                  <Grid item xs={12} >
             <Title title={"Todays"} />
             </Grid> 
+
+            <Grid item sx={{m:{xs:"10%", md:"3% 0 5% 1%"} , whiteSpace:"nowrap"}}>
+            <DescriptionTitle title={'Flash Sales'} />
+  </Grid>
+
 
              <Grid container
           sx={{
@@ -213,6 +267,10 @@ textsec={"Sec"}
 
 </Grid>
 
+<Grid item sx={{m:{xs:"10%", md:"3% 0 5% 1%"} , whiteSpace:"nowrap"}}>
+            <DescriptionTitle title={'Explore Our Products'} />
+  </Grid>
+
 
 <Grid container
 
@@ -265,7 +323,7 @@ sx={{
 
 
 
-  <Grid container xs={12}>
+  <Grid container xs={12} sx={{mb:10}}>
 
 <AdDescriptionImage
 
@@ -315,6 +373,14 @@ sx={{
 />
 
 </Grid>
+
+
+<Grid xs={12} sx={{display:"flex",justifyContent:"center"}}>
+  <FeaturesIcons/>
+</Grid>
+
+
+<Footer/>
 
            
      

@@ -4,7 +4,7 @@ import React from 'react'
 const DescriptionTitle = (props) => {
   return (
     <div>
-      <Typography sx={{fontWeight:"bold"}} variant='h5'>{props.title}</Typography>
+      <Typography sx={{fontWeight:"400"}} variant='h4'>{props.title}</Typography>
     </div>
   )
 }
