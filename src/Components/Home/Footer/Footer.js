@@ -35,6 +35,7 @@ function Footer() {
         bgcolor: "#111",
         padding: "100px",
         height: "auto",
+
         display: "flex",
         justifyContent: "center",
       }}
@@ -249,8 +250,8 @@ function Footer() {
 
       <Grid
         xs={12}
-        sm={12}
-        md={12}
+        sm={6}
+        md={6}
         lg={2}
         xl={3}
         sx={{ pb: { xs: 7, lg: 0 }, pl: 2 }}
@@ -312,19 +313,54 @@ function Footer() {
 
         <Grid container>
           <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
-            <InstagramIcon fontSize="large" sx={{ color: "#fff" }} />
+            <InstagramIcon
+              fontSize="large"
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "#BB2525",
+                },
+                cursor: "pointer",
+              }}
+            />
+          </Grid>
+          <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
+            <FacebookIcon
+              fontSize="large"
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "#1450A3",
+                },
+                cursor: "pointer",
+              }}
+            />
           </Grid>
 
           <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
-            <TwitterIcon fontSize="large" sx={{ color: "#fff" }} />
+            <TwitterIcon
+              fontSize="large"
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "skyblue",
+                },
+                cursor: "pointer",
+              }}
+            />
           </Grid>
 
           <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
-            <FacebookIcon fontSize="large" sx={{ color: "#fff" }} />
-          </Grid>
-
-          <Grid item xs={6} sm={3} md={3} lg={3} xl={3}>
-            <LinkedInIcon fontSize="large" sx={{ color: "#fff" }} />
+            <LinkedInIcon
+              fontSize="large"
+              sx={{
+                color: "#fff",
+                "&:hover": {
+                  color: "#141E46",
+                },
+                cursor: "pointer",
+              }}
+            />
           </Grid>
         </Grid>
       </Grid>
