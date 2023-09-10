@@ -250,11 +250,13 @@ function Footer() {
 
       <Grid
         xs={12}
-        sm={6}
+        sm={12}
         md={6}
         lg={2}
-        xl={3}
-        sx={{ pb: { xs: 7, lg: 0 }, pl: 2 }}
+        xl={2}
+        sx={{
+          pb: { xs: 7, lg: 0 },
+        }}
       >
         <Grid xs={12}>
           <Typography
