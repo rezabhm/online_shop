@@ -16,29 +16,30 @@ import {
 
   const Maingrid = styled("grid")(({ theme }) => ({
     height: "50vh",
-    width: "25%",
+     width: "25%",
     marginBottom:"10%",
  
   
     [theme.breakpoints.down("sm")]: {
       height: "70vh",
-      width: "100vh",
-      margin: " 25% 0",
+      width: "100%",
+       margin: " 3% 0 50% 0",
     },
   
     "@media (min-width:900px) and (max-width:1294px)": {
-      marginRight: "12%",
+       
       marginBottom: "20%",
     },
     "@media (min-width:600px) and (max-width:900px)": {
-      marginRight: "25%",
+      marginRight: "6%",
       marginBottom: "30%",
+      
     },
     "@media(max-width:460px)": {
       marginBottom: "30%",
     },
     "@media (min-width:600px) and (max-width:715px)": {
-      margin: "25% 15%",
+    //  margin: "25% 15%",
     },
   }));
 const OurProducts = (props) => {
@@ -48,7 +49,7 @@ const OurProducts = (props) => {
              {props.WhishlistItems2.map((item)=>(
                
                 
-               <Maingrid xs={12} sm={12} md={3} xl={3}>
+               <Maingrid xs={12} sm={12} md={3} lg={3} xl={3}>
                <Product
                  image={
                   item.image

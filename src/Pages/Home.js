@@ -28,36 +28,38 @@ import {styled} from "@mui/material";
 import Box from "@mui/material/Box/Box";
 import { useState } from "react";
 import OurProducts from "../Components/Home/OurProducts/OurProducts";
+import SidebarDrawer from "../Components/Home/SidebarDrawer/SidebarDrawer";
 // import WhishListHome from '../Components/Home/WhishListHome/WhishListHome'
 
 
 
 const Maingrid = styled("grid")(({ theme }) => ({
-    height: "50vh",
-    width: "25%",
- 
-  
-    [theme.breakpoints.down("sm")]: {
-      height: "70vh",
-      width: "100vh",
-      margin: " 25% 0",
-    },
-  
-    "@media (min-width:900px) and (max-width:1287px)": {
-      marginRight: "3%",
-      marginBottom: "25%",
-    },
-    "@media (min-width:600px) and (max-width:900px)": {
-      marginRight: "25%",
-      marginBottom: "30%",
-    },
-    "@media(max-width:460px)": {
-      marginBottom: "30%",
-    },
-    "@media (min-width:600px) and (max-width:715px)": {
-      margin: "25% 15%",
-    },
-  }));
+  height: "50vh",
+   width: "25%",
+  marginBottom:"10%",
+
+
+  [theme.breakpoints.down("sm")]: {
+    height: "70vh",
+    width: "100%",
+     margin: " 3% 0 50% 0",
+  },
+
+  "@media (min-width:900px) and (max-width:1294px)": {
+   
+    marginBottom: "20%",
+  },
+  "@media (min-width:600px) and (max-width:900px)": {
+   marginRight:"5%",
+    marginBottom: "30%",
+  },
+  "@media(max-width:460px)": {
+    marginBottom: "30%",
+  },
+  "@media (min-width:600px) and (max-width:715px)": {
+  //  margin: "25% 15%",
+  },
+}));
 
 function Home(){
 
@@ -69,15 +71,17 @@ const [showlist,setShowlist]=useState(false)
 
         <>
 
-<NavBar/>
- <Container  maxWidth={"xl"}
+ <NavBar/> 
+ <Container    maxWidth={"xl"}
         sx={{
+          mt:10,
           "@media (max-width:340px)": {
             marginBottom: "20%",
+            
           },
         }}>
 
-<Grid sx={{mb:"3%"}} container>
+{/* <Grid sx={{mb:"3%"}} container>
 
 <Box sx={{position:'relative'}}>
 {showlist ?     <Grid md={6} sm={6}  item   sx={{height:"350px",width:{sm:"50%",xs:"50%"},mt:"4%",ml:'3%',zIndex:"1000"}}>
@@ -118,8 +122,30 @@ const [showlist,setShowlist]=useState(false)
 </Grid>}
 
 
+</Grid> */}
+<Grid container>
+<Grid sx={{display:{sm:"block",xs:"block",md:"none"}}}>
+<SidebarDrawer/>
+</Grid>
+<Grid sx={{display:{sm:"none",md:"flex",xs:"none"}}}>
+<CategoryList data={Cdate}/>
 </Grid>
 
+<Grid   sm={12} md={8}  item sx={{width:{sm:"100%",xs:"100%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"1"}}>
+<ImageViewer images={[
+
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
+'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
+'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
+'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
+
+
+
+]} />
+
+</Grid>
+</Grid>
 
 
 
@@ -133,7 +159,7 @@ const [showlist,setShowlist]=useState(false)
   </Grid>
 
 
-             <Grid container
+              <Grid container
           sx={{
             marginTop: "2%",
             marginBottom: "10%",
@@ -196,6 +222,11 @@ const [showlist,setShowlist]=useState(false)
           </Maingrid>
          
             </Grid> 
+
+
+
+
+
             <Grid  xs={12} sx={{mb:6,mwidth:"100%",display:'flex',justifyContent:"center","@media (min-width:600px) and (max-width:715px)":{marginTop:"35%"},"@media (max-width:547px)":{marginTop:"30%"}}}>
              <Button sx={{textAlign:"center",color:"#fff",backgroundColor:"#DB4444",padding:'10px',borderRadius:'7px',"&:hover":{backgroundColor:"red"}}}>view All Products</Button>
              </Grid>
@@ -228,12 +259,12 @@ data={ [
 
 data={
     [
-        { id: 0, icon: <PhoneAndroidOutlinedIcon />, text: "Phones", colors: "white",},
-        { id: 1, icon: <ComputerOutlinedIcon />, text: "Computer", colors: "white" },
-        { id: 2, icon: <WatchOutlinedIcon />, text: "SmartWatch", colors: "white" },
-        { id: 3, icon: <CameraAltOutlinedIcon />, text: "Camera", colors: "white" },
-        { id: 4, icon: <HeadsetOutlinedIcon />, text: "HeadPhones", colors: "white" },
-        { id: 5, icon: <SportsEsportsOutlinedIcon />, text: "Gaming", colors: "white",},
+        { id: 0, icon: <PhoneAndroidOutlinedIcon />, text: "Phones", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
+        { id: 1, icon: <ComputerOutlinedIcon />, text: "Computer", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff" },
+        { id: 2, icon: <WatchOutlinedIcon />, text: "SmartWatch", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
+        { id: 3, icon: <CameraAltOutlinedIcon />, text: "Camera", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
+        { id: 4, icon: <HeadsetOutlinedIcon />, text: "HeadPhones", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
+        { id: 5, icon: <SportsEsportsOutlinedIcon />, text: "Gaming", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
 
     ]
 }
@@ -272,7 +303,7 @@ textsec={"Sec"}
   </Grid>
 
 
-<Grid container
+   <Grid container
 
 sx={{
     marginTop: "5%",
@@ -305,7 +336,7 @@ sx={{
 <Grid  xs={12} sx={{width:"100%",display:'flex',justifyContent:"center","@media (min-width:600px) and (max-width:715px)":{marginTop:"35%"},"@media (max-width:547px)":{marginTop:"30%"}}}>
              <Button sx={{textAlign:"center",color:"#fff",backgroundColor:"#DB4444",padding:'10px',borderRadius:'7px',"&:hover":{backgroundColor:"red"}}}>view All Products</Button>
              </Grid>
-</Grid>
+</Grid>   
 
 
 
@@ -323,7 +354,7 @@ sx={{
 
 
 
-  <Grid container xs={12} sx={{mb:10}}>
+  {/* <Grid container xs={12} sx={{mb:10}}>
 
 <AdDescriptionImage
 
@@ -372,21 +403,22 @@ sx={{
 
 />
 
-</Grid>
+</Grid> */}
 
 
 <Grid xs={12} sx={{display:"flex",justifyContent:"center"}}>
   <FeaturesIcons/>
-</Grid>
+</Grid> 
 
 
-<Footer/>
+
 
            
      
            
             
 </Container>
+ <Footer/> 
           
 
         </>

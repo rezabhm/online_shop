@@ -16,13 +16,13 @@ function Product(props) {
     <Box>
       <Card
         sx={{
-          width: "300px",
-          height: "500px",
+          width: "75%",
+          height: "100%",
 
           backgroundColor: "",
-          "@media (max-width:715px)": {
-          width:"400px",
-          height:"600px"
+          "@media (max-width:845px)": {
+          width:"100%",
+           height:"100%"
           },
         }}
       >
