@@ -3,7 +3,9 @@ import { Box, Button, Grid, TextField, Typography } from "@mui/material";
 import React from "react";
 import SignupWithGoogle from "../SignupWithGoogle/SignupWithGoogle";
 import Header from "../Header/Header";
+import { Link, useNavigate } from "react-router-dom";
 const SignupForm = (style) => {
+  const navigate = useNavigate();
   const texFiled = [
     { id: 1, label: "Name", onchange: () => console.log("okay1") },
     { id: 2, label: "Last-Name", onchange: () => console.log("okay2") },
@@ -61,8 +63,22 @@ const SignupForm = (style) => {
         </Button>
         <Typography sx={{ textAlign: "center", mb: 8 }}>
           Already have account?{" "}
-          <span style={{ borderBottom: "1px solid black", marginLeft: "7px" }}>
-            Log in
+          <span
+            style={{
+              borderBottom: "1px solid black",
+              marginLeft: "7px",
+              cursor: "pointer",
+            }}
+          >
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "#444",
+              }}
+              to={"/Login"}
+            >
+              Log in
+            </Link>
           </span>
         </Typography>
       </Box>

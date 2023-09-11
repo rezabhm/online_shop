@@ -45,7 +45,7 @@ export default function LoginForm() {
 
                     <Grid item xs={12}>
 
-                        <FormControl sx={{ m: 1, width: '100%'  }} variant="standard">
+                        <FormControl sx={{  width: '100%'  }} variant="standard">
                             <InputLabel onChange={()=> ("Done PassWord")} htmlFor="standard-adornment-password">PassWord</InputLabel>
                             <Input
                                 id="standard-adornment-password"
@@ -66,7 +66,7 @@ export default function LoginForm() {
 
                     </Grid>
                     <Grid item xs={12}>
-                         <GoogleOAuth />
+                        
                     </Grid>
                     <Grid item xs={12}>
                         <ForgetPassword />
