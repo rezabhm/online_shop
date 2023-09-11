@@ -27,12 +27,13 @@ import {
     },
   
     "@media (min-width:900px) and (max-width:1294px)": {
-       
-      marginBottom: "20%",
+       width:"30%",
+      marginBottom: "10%",
     },
     "@media (min-width:600px) and (max-width:900px)": {
       marginRight: "6%",
-      marginBottom: "30%",
+      marginBottom: "15%",
+      width:"33%"
       
     },
     "@media(max-width:460px)": {

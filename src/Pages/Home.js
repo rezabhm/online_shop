@@ -48,10 +48,12 @@ const Maingrid = styled("grid")(({ theme }) => ({
   "@media (min-width:900px) and (max-width:1294px)": {
    
     marginBottom: "20%",
+    width:'30%'
   },
   "@media (min-width:600px) and (max-width:900px)": {
    marginRight:"5%",
-    marginBottom: "30%",
+    marginBottom: "15%",
+    width:'33%'
   },
   "@media(max-width:460px)": {
     marginBottom: "30%",
@@ -135,10 +137,10 @@ const [showlist,setShowlist]=useState(false)
 <ImageViewer images={[
 
 'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
-'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
-'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
-'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
 
 
 
@@ -162,7 +164,7 @@ const [showlist,setShowlist]=useState(false)
               <Grid container
           sx={{
             marginTop: "2%",
-            marginBottom: "10%",
+            marginBottom: "0",
             
             display: "flex",
           
