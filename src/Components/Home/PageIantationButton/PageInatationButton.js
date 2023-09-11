@@ -9,7 +9,7 @@ const PageInatationButton = (props) => {
     <>
       <Grid
         container
-        sx={{ mr: 8, mb: 3, display: { xs: "none", md: "flex" } }}
+        sx={{ mr: 8, mb: 2, display: { xs: "none", md: "flex" } }}
       >
         <Grid xs={12} md={6} sx={{ width: "100%" }}>
           <Fab
