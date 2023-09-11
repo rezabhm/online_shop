@@ -49,8 +49,9 @@ const CategorySignButton = (props) => {
             <Grid
               xs={12}
               sm={12}
-              md={2}
-              sx={{ px: 3, py: { xs: "10px", md: "0" } }}
+              md={6}
+              lg={2}
+              sx={{ px: 3, py: { xs: "10px", lg: "0" } }}
             >
               <SignButton
                 icon={item.icon}

@@ -7,9 +7,9 @@ const SignButton = (props) => {
       direction="column"
       sx={{
         width: "100%",
-        height: "170px",
+        height: "180px",
         border: "1px solid gray",
-        padding: 1.5,
+        padding: 3,
         justifyContent: "center",
         alignItems: "center",
 
@@ -74,9 +74,8 @@ const SignButton = (props) => {
       <Typography
         variant="body1"
         sx={{
-          pr: 1.7,
-          pl: 1,
           pb: 4,
+          pr: 1.5,
           color: props.textColor,
           width: { xs: "100%", md: "70%", lg: "100%" },
           textAlign: "center",
