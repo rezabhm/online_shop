@@ -1,10 +1,10 @@
 import React from "react";
-import {Button, Drawer, Grid} from "@mui/material";
+import { Button, Drawer, Grid } from "@mui/material";
 import NavBar from "../Components/Home/Navbar/NavBar";
 import CategoryList from "../Components/Home/CategoryList/CategoryList";
 import ImageViewer from "../Components/Home/ImageViewer/ImageViewer";
 import Title from "../Components/Home/Title/Title";
-import {Cdate} from "../Components/Home/CategoryList/CategoryData";
+import { Cdate } from "../Components/Home/CategoryList/CategoryData";
 import DescriptionTitle from "../Components/Home/DescriptionTitle/DescriptionTitle";
 import PageInatationButton from "../Components/Home/PageIantationButton/PageInatationButton";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
@@ -16,309 +16,462 @@ import WatchOutlinedIcon from "@mui/icons-material/WatchOutlined";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import HeadsetOutlinedIcon from "@mui/icons-material/HeadsetOutlined";
 import SportsEsportsOutlinedIcon from "@mui/icons-material/SportsEsportsOutlined";
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import Product from "../Components/Home/Product/Product";
 import AdDescriptionImage from "../Components/Home/AdDescriptionImage/AdDescriptionImage";
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import FeaturesIcons from "../Components/Home/FeaturesIcons/FeaturesIcons";
 import Footer from "../Components/Home/Footer/Footer";
 import AdImage from "../Components/Home/AdImage/AdImage";
 import Container from "@mui/material/Container/Container";
-import {styled} from "@mui/material";
+import { styled } from "@mui/material";
 import Box from "@mui/material/Box/Box";
 import { useState } from "react";
 import OurProducts from "../Components/Home/OurProducts/OurProducts";
 import SidebarDrawer from "../Components/Home/SidebarDrawer/SidebarDrawer";
 // import WhishListHome from '../Components/Home/WhishListHome/WhishListHome'
 
-
-
 const Maingrid = styled("grid")(({ theme }) => ({
   height: "50vh",
-   width: "25%",
-  marginBottom:"10%",
-
+  width: "25%",
+  marginBottom: "10%",
 
   [theme.breakpoints.down("sm")]: {
     height: "70vh",
     width: "100%",
-     margin: " 3% 0 50% 0",
+    margin: " 3% 0 50% 0",
   },
 
   "@media (min-width:900px) and (max-width:1294px)": {
-   
     marginBottom: "5%",
-    width:'30%'
+    width: "30%",
   },
   "@media (min-width:600px) and (max-width:900px)": {
-   marginRight:"5%",
+    marginRight: "5%",
     marginBottom: "15%",
-    width:'33%'
+    width: "33%",
   },
   "@media(max-width:460px)": {
     marginBottom: "30%",
   },
   "@media (min-width:600px) and (max-width:715px)": {
-  //  margin: "25% 15%",
+    //  margin: "25% 15%",
   },
 }));
 
-function Home(){
+function Home() {
+  const [showlist, setShowlist] = useState(false);
 
-
-const [showlist,setShowlist]=useState(false)
-
-
-    return(
-
-        <>
-
- <NavBar/> 
- <Container    maxWidth={"xl"}
+  return (
+    <>
+      <NavBar />
+      <Container
+        maxWidth={"xl"}
         sx={{
-          mt:10,
+          mt: 10,
           "@media (max-width:340px)": {
             marginBottom: "20%",
-            
           },
-        }}>
+        }}
+      >
+        <Grid container>
+          <Grid sx={{ display: { sm: "block", xs: "block", md: "none" } }}>
+            <SidebarDrawer />
+          </Grid>
+          <Grid sx={{ display: { sm: "none", md: "flex", xs: "none" } }}>
+            <CategoryList data={Cdate} />
+          </Grid>
 
+          <Grid
+            sm={12}
+            md={8}
+            item
+            sx={{
+              width: { sm: "100%", xs: "100%" },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "auto",
+              mt: "10%",
+              zIndex: "1",
+            }}
+          >
+            <ImageViewer
+              images={[
+                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+              ]}
+            />
+          </Grid>
+        </Grid>
 
-<Grid container>
-<Grid sx={{display:{sm:"block",xs:"block",md:"none"}}}>
-<SidebarDrawer/>
-</Grid>
-<Grid sx={{display:{sm:"none",md:"flex",xs:"none"}}}>
-<CategoryList data={Cdate}/>
-</Grid>
+        <Grid item xs={12}>
+          <Title title={"Todays"} />
+        </Grid>
 
-<Grid   sm={12} md={8}  item sx={{width:{sm:"100%",xs:"100%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"1"}}>
-<ImageViewer images={[
+        <Grid
+          item
+          sx={{ m: { xs: "10%", md: "3% 0 5% 1%" }, whiteSpace: "nowrap" }}
+        >
+          <DescriptionTitle title={"Flash Sales"} />
+        </Grid>
 
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
+        <Container maxWidth={"lg"}>
+          <Grid
+            container
+            sx={{
+              marginTop: "2%",
+              marginBottom: "0",
 
+              display: "flex",
 
+              justifyContent: "space-between",
+              width: "100%",
 
-]} />
+              height: { xs: "100%" },
+            }}
+          >
+            <Maingrid xs={12} sm={12} md={3} xl={3}>
+              <Product
+                image={
+                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                }
+                title={"Abzar"}
+                price={100}
+                star={4}
+                rateNumber={25}
+              />
+            </Maingrid>
 
-</Grid>
-</Grid>
+            <Maingrid xs={12} sm={12} md={3} xl={3}>
+              <Product
+                image={
+                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                }
+                title={"Mobile"}
+                price={250}
+                star={3.5}
+                rateNumber={50}
+              />
+            </Maingrid>
 
+            <Maingrid xs={12} sm={12} md={3} xl={3}>
+              <Product
+                image={
+                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                }
+                title={"Tala"}
+                price={1500}
+                star={5}
+                rateNumber={250}
+              />
+            </Maingrid>
 
+            <Maingrid xs={12} sm={12} md={3} xl={3}>
+              <Product
+                image={
+                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                }
+                title={"chador"}
+                price={75}
+                star={1}
+                rateNumber={10}
+              />
+            </Maingrid>
+          </Grid>
+        </Container>
 
-            
-                 <Grid item xs={12} >
-            <Title title={"Todays"} />
-            </Grid> 
-
-            <Grid item sx={{m:{xs:"10%", md:"3% 0 5% 1%"} , whiteSpace:"nowrap"}}>
-            <DescriptionTitle title={'Flash Sales'} />
-  </Grid>
-
-<Container maxWidth={"lg"}>
-              <Grid container
+        <Grid
+          xs={12}
           sx={{
-            marginTop: "2%",
-            marginBottom: "0",
-            
+            mb: 6,
+            mwidth: "100%",
             display: "flex",
-          
+            justifyContent: "center",
+            "@media (min-width:600px) and (max-width:715px)": {
+              marginTop: "35%",
+            },
+            "@media (max-width:547px)": { marginTop: "30%" },
+          }}
+        >
+          <Button
+            sx={{
+              textAlign: "center",
+              color: "#fff",
+              backgroundColor: "#DB4444",
+              padding: "10px",
+              borderRadius: "7px",
+              "&:hover": { backgroundColor: "red" },
+            }}
+          >
+            view All Products
+          </Button>
+        </Grid>
+
+        <Grid item xs={12} sx={{ mb: "3%" }}>
+          <Title title={"Categories"} />
+        </Grid>
+        <Box
+          sx={{
+            alignItems: "center",
+            display: "flex",
             justifyContent: "space-between",
             width: "100%",
+          }}
+        >
+          <Grid
+            item
+            sx={{
+              m: { xs: "10%", md: "0" },
+              textAlign: "center",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <DescriptionTitle title={"Brows By Category"} />
+          </Grid>
 
-            height: { xs: "100%" },
-          }}>
-
-                
-          <Maingrid xs={12} sm={12} md={3} xl={3}>
-            <Product
-              image={
-                "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
-              }
-              title={"Abzar"}
-              price={100}
-              star={4}
-              rateNumber={25}
-            />
-          </Maingrid>
-
-          <Maingrid xs={12} sm={12} md={3} xl={3}>
-            <Product
-              image={
-                "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
-              }
-              title={"Mobile"}
-              price={250}
-              star={3.5}
-              rateNumber={50}
-            />
-          </Maingrid>
-
-          <Maingrid xs={12} sm={12} md={3} xl={3}>
-            <Product
-              image={
-                "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
-              }
-              title={"Tala"}
-              price={1500}
-              star={5}
-              rateNumber={250}
-            />
-          </Maingrid>
-
-          <Maingrid xs={12} sm={12} md={3} xl={3}>
-            <Product
-              image={
-                "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
-              }
-              title={"chador"}
-              price={75}
-              star={1}
-              rateNumber={10}
-            />
-          </Maingrid>
-         
-            </Grid> 
-
-            </Container>
-
-
-
-
-
-            <Grid  xs={12} sx={{mb:6,mwidth:"100%",display:'flex',justifyContent:"center","@media (min-width:600px) and (max-width:715px)":{marginTop:"35%"},"@media (max-width:547px)":{marginTop:"30%"}}}>
-             <Button sx={{textAlign:"center",color:"#fff",backgroundColor:"#DB4444",padding:'10px',borderRadius:'7px',"&:hover":{backgroundColor:"red"}}}>view All Products</Button>
-             </Grid>
-
-             <Grid item xs={12}  sx={{mb:"3%"}}>
-            <Title title={"Categories"} />
-            </Grid> 
-                   <Box sx={{alignItems:"center",display:"flex",justifyContent:"space-between",width:"100%",m:{xs:"15%",md:"0",lg:'2.5% 0'}}}>
-            <Grid item sx={{m:{xs:"10%", md:"0"},textAlign:"center" , whiteSpace:"nowrap"}}>
-            <DescriptionTitle title={'Brows By Category'} />
-            </Grid>
-
-                <Grid item >
+          <Grid item>
             <PageInatationButton
+              data={[
+                {
+                  id: 1,
+                  icon: <ArrowBackOutlinedIcon />,
+                  onClick: () => {
+                    console.log("left button click");
+                  },
+                },
+                {
+                  id: 2,
+                  icon: <ArrowForwardOutlinedIcon />,
+                  onClick: () => {
+                    console.log("right button click");
+                  },
+                },
+              ]}
+            />
+          </Grid>
+        </Box>
 
-data={ [
-    { id: 1, icon: <ArrowBackOutlinedIcon />, onClick:()=>{
-            console.log('left button click')} },
-    { id: 2, icon: <ArrowForwardOutlinedIcon /> , onClick:()=>{
-            console.log('right button click')}},
+        <Grid item sx={{ margin: "auto", width: "100%" }}>
+          <CategorySignButton
+            data={[
+              {
+                id: 0,
+                icon: <PhoneAndroidOutlinedIcon />,
+                text: "Phones",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+              {
+                id: 1,
+                icon: <ComputerOutlinedIcon />,
+                text: "Computer",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+              {
+                id: 2,
+                icon: <WatchOutlinedIcon />,
+                text: "SmartWatch",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+              {
+                id: 3,
+                icon: <CameraAltOutlinedIcon />,
+                text: "Camera",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+              {
+                id: 4,
+                icon: <HeadsetOutlinedIcon />,
+                text: "HeadPhones",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+              {
+                id: 5,
+                icon: <SportsEsportsOutlinedIcon />,
+                text: "Gaming",
+                colors: "white",
+                colorBtn: "#444",
+                colorBtn2: "#fff",
+                textColor2: "#fff",
+              },
+            ]}
+          />
+        </Grid>
 
-]}
+        <Container maxWidth={"lg"}>
+          <Grid item xs={12} mt={"4%"} sx={{ width: "100%" }}>
+            <AdImage
+              img={
+                "https://e0.pxfuel.com/wallpapers/3/947/desktop-wallpaper-headphones-audio-dark-dual-wide-display-2560-x-1080-dark.jpg"
+              }
+              title={"Enhance Your Music Experiance"}
+              pushLinkShop={"/buy"}
+              pushLinkCategory={"/pushlink"}
+              day={"23"}
+              hour={"05"}
+              minute={"59"}
+              second={"35"}
+              texthours={"Hours"}
+              textdays={"Days"}
+              textminutes={"Min"}
+              textsec={"Sec"}
+            />
+          </Grid>
+        </Container>
 
-/>
-</Grid>
-</Box>    
+        <Grid item xs={12} sx={{ mt: 9 }}>
+          <Title title={"Our Products"} />
+        </Grid>
 
- <Grid item sx={{margin:"auto",width:"100%"}}>
-<CategorySignButton
+        <Grid
+          item
+          sx={{ m: { xs: "10%", md: "3% 0 5% 1%" }, whiteSpace: "nowrap" }}
+        >
+          <DescriptionTitle title={"Explore Our Products"} />
+        </Grid>
 
-data={
-    [
-        { id: 0, icon: <PhoneAndroidOutlinedIcon />, text: "Phones", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
-        { id: 1, icon: <ComputerOutlinedIcon />, text: "Computer", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff" },
-        { id: 2, icon: <WatchOutlinedIcon />, text: "SmartWatch", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
-        { id: 3, icon: <CameraAltOutlinedIcon />, text: "Camera", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
-        { id: 4, icon: <HeadsetOutlinedIcon />, text: "HeadPhones", colors: "white" ,colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
-        { id: 5, icon: <SportsEsportsOutlinedIcon />, text: "Gaming", colors: "white",colorBtn:"#444",colorBtn2:'#fff',textColor2:"#fff"},
+        <Container maxWidth={"lg"}>
+          <Grid
+            container
+            sx={{
+              marginTop: "5%",
+              marginBottom: "10%",
 
-    ]
-}
+              display: "flex",
 
-/>
-</Grid> 
+              justifyContent: { xs: "center" },
+              width: "100%",
 
-<Container maxWidth={"lg"}>
-  <Grid item xs={12} mt={"4%"} sx={{width:"100%"}}>
-<AdImage
+              height: { xs: "100%" },
+            }}
+          >
+            <OurProducts
+              WhishlistItems2={[
+                {
+                  id: 1,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "phone",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 2,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "laptop",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 3,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "mobile",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 4,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "Ipad",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 5,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "smartPhone",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 6,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "MacBook",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 7,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "Ultra Hd",
+                  price: "123",
+                  rateNumber: "",
+                },
+                {
+                  id: 8,
+                  image:
+                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  title: "television",
+                  price: "123",
+                  rateNumber: "",
+                },
+              ]}
+            />
 
-img={"https://e0.pxfuel.com/wallpapers/3/947/desktop-wallpaper-headphones-audio-dark-dual-wide-display-2560-x-1080-dark.jpg"}
-title={'Enhance Your Music Experiance'}
-pushLinkShop={'/buy'}
-pushLinkCategory={'/pushlink'}
-day={'23'}
-hour={'05'}
-minute={'59'}
-second={'35'}
-texthours={"Hours"}
-textdays={"Days"}
-textminutes={"Min"}
-textsec={"Sec"}
+            <Grid
+              xs={12}
+              sx={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                "@media (min-width:600px) and (max-width:715px)": {
+                  marginTop: "35%",
+                },
+                "@media (max-width:547px)": { marginTop: "30%" },
+              }}
+            >
+              <Button
+                sx={{
+                  textAlign: "center",
+                  color: "#fff",
+                  backgroundColor: "#DB4444",
+                  padding: "10px",
+                  borderRadius: "7px",
+                  "&:hover": { backgroundColor: "red" },
+                }}
+              >
+                view All Products
+              </Button>
+            </Grid>
+          </Grid>
+        </Container>
 
-/>
-</Grid>   
-</Container>
+        <Grid item xs={12} sx={{ mt: 9 }}>
+          <Title title={"Featured"} />
+        </Grid>
 
-<Grid item xs={12} sx={{mt:9}}>
+        <Grid
+          item
+          sx={{ m: { xs: "10%", md: "3% 0 5% 1%" }, whiteSpace: "nowrap" }}
+        >
+          <DescriptionTitle title={"New Arrival"} />
+        </Grid>
 
- <Title title={"Our Products"} />
-
-</Grid>
-
-<Grid item sx={{m:{xs:"10%", md:"3% 0 5% 1%"} , whiteSpace:"nowrap"}}>
-            <DescriptionTitle title={'Explore Our Products'} />
-  </Grid>
-
-<Container maxWidth={"lg"}>
-   <Grid container
-
-sx={{
-    marginTop: "5%",
-    marginBottom: "10%",
-    
-    display: "flex",
-  
-    justifyContent: {xs:"center"},
-    width: "100%",
-
-    height: { xs: "100%" },
-  }}>
-<OurProducts 
-      WhishlistItems2={
-        [
-            {id:1,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"phone",price:"123",rateNumber:""},
-            {id:2,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"laptop",price:"123",rateNumber:""},
-            {id:3,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"mobile",price:"123",rateNumber:""},
-            {id:4,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"Ipad",price:"123",rateNumber:""},
-            {id:5,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"smartPhone",price:"123",rateNumber:""},
-            {id:6,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"MacBook",price:"123",rateNumber:""}
-            ,{id:7,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"Ultra Hd",price:"123",rateNumber:""},
-            {id:8,image:"https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",title:"television",price:"123",rateNumber:""}
-        ]
-    }/>
-
-
-
-    
-<Grid  xs={12} sx={{width:"100%",display:'flex',justifyContent:"center","@media (min-width:600px) and (max-width:715px)":{marginTop:"35%"},"@media (max-width:547px)":{marginTop:"30%"}}}>
-             <Button sx={{textAlign:"center",color:"#fff",backgroundColor:"#DB4444",padding:'10px',borderRadius:'7px',"&:hover":{backgroundColor:"red"}}}>view All Products</Button>
-             </Grid>
-</Grid>   
-</Container>
-
-
-
-<Grid item xs={12} sx={{mt:9}}>
-
- <Title title={"Featured"} />
-
-</Grid>
-
-
-<Grid item sx={{m:{xs:"10%", md:"3% 0 5% 1%"} , whiteSpace:"nowrap"}}>
-            <DescriptionTitle title={'New Arrival'} />
-  </Grid>
-
-
-
-  {/* <Grid container xs={12} sx={{mb:10}}>
+        {/* <Grid container xs={12} sx={{mb:10}}>
 
 <AdDescriptionImage
 
@@ -369,33 +522,13 @@ sx={{
 
 </Grid> */}
 
-
-<Grid xs={12} sx={{display:"flex",justifyContent:"center"}}>
-  <FeaturesIcons/>
-</Grid> 
-
-
-
-
-           
-     
-           
-            
-</Container>
- <Footer/> 
-          
-
-        </>
-
-
-
-    )
-
-
-
-
+        <Grid xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+          <FeaturesIcons />
+        </Grid>
+      </Container>
+      <Footer />
+    </>
+  );
 }
 
 export default Home;
-
-
