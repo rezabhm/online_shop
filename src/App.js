@@ -1,10 +1,7 @@
-import Home from "./Pages/Home"; 
-function App() {
-  return (
-    <div>
-      
-    </div>
-  );
-}
+import { useRoutes } from "react-router-dom";
+import routes from "./Routes";
 
-export default App;
+export default function App() {
+  let router = useRoutes(routes);
+  return router;
+}
