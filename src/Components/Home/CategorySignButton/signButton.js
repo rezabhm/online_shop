@@ -80,6 +80,7 @@ const SignButton = (props) => {
           color: props.textColor,
           width: { xs: "100%", md: "70%", lg: "100%" },
           textAlign: "center",
+          whiteSpace: { xs: "wrap", md: "wrap", lg: "nowrap" },
         }}
       >
         {props.text}

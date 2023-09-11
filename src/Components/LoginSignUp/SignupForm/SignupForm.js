@@ -21,7 +21,7 @@ const SignupForm = (style) => {
             display: "flex",
             width: "100%",
           },
-          mt:10,
+          mt: 10,
           width: "27rem",
         }}
         noValidate
@@ -43,7 +43,10 @@ const SignupForm = (style) => {
             />
           );
         })}
-        <SignupWithGoogle />
+        <Grid sx={{ display: "flex", justifyContent: "center" }}>
+          <SignupWithGoogle />
+        </Grid>
+
         <Button
           variant="contained"
           color="error"

@@ -13,12 +13,12 @@ import Footer from "../Components/Home/Footer/Footer";
 import SignupForm from "../Components/LoginSignUp/SignupForm/SignupForm";
 import LoginForm from "../Components/LoginSignUp/LoginForm/LoginForm";
 
-const signupPAge = () => {
+const SignupPage = () => {
   return (
-    <Box >
+    <Box>
       <NavBar />
 
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"xl"} sx={{ mt: 10 }}>
         <Grid
           container
           spacing={2}
@@ -53,4 +53,4 @@ const signupPAge = () => {
   );
 };
 
-export default signupPAge;
+export default SignupPage;

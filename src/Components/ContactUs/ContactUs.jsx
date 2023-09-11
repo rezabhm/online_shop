@@ -9,7 +9,7 @@ const ContactUs = () => {
   return (
     <>
       <NavBar />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mt: 20 }}>
         <Grid sx={{ my: 10 }}>
           <Routing />
         </Grid>

@@ -153,8 +153,14 @@ import { styled } from "@mui/material";
 import { InputBase, alpha } from "@mui/material";
 import FavoriteIcon from "./favoriteIcon";
 import ShoppingIcon from "./shoppingIcon";
+import { Link } from "react-router-dom";
 
-const pages = ["Home", "Contact", "About", "SignUp"];
+const pages = [
+  { id: 1, name: "Home", to: "/" },
+  { id: 2, name: "Contact", to: "/ContactUs" },
+  { id: 3, name: "About", to: "/about" },
+  { id: 4, name: "Signup", to: "/SignupPage" },
+];
 const settings = [];
 const Search1 = styled("div")(({ theme }) => ({
   position: "relative",
@@ -266,7 +272,18 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    {" "}
+                    <Link
+                      style={{
+                        textDecoration: "none",
+                        color: "#444",
+                      }}
+                      to={page.to}
+                    >
+                      {page.name}
+                    </Link>
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -279,7 +296,17 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "#333", display: "block" }}
               >
-                {page}
+                <Link
+                  style={{
+                    textDecoration: "none",
+                    color: "#444",
+                    fontSize: "20px",
+                    paddingLeft: "10px",
+                  }}
+                  to={page.to}
+                >
+                  {page.name}
+                </Link>
               </Button>
             ))}
           </Box>

@@ -10,7 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { FiTwitter } from "react-icons/fi";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { RiLinkedinLine } from "react-icons/ri";
+
 import { Box, Grid } from "@mui/material";
 
 const AboutSlider = (props) => {
@@ -61,7 +61,7 @@ const AboutSlider = (props) => {
                 },
               }}
             >
-              <RiLinkedinLine />
+            
             </IconButton>
           </CardActions>
         </Card>

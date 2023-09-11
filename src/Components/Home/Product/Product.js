@@ -21,12 +21,13 @@ function Product(props) {
 
           backgroundColor: "",
           "@media (max-width:845px)": {
-          width:"100%",
-           height:"100%"
+            width: "100%",
+            height: "100%",
           },
+          cursor: "pointer",
         }}
+      
       >
-
         <Box>
           <img
             style={{ height: "100%", width: "100%", marginBottom: "10px" }}
@@ -35,18 +36,6 @@ function Product(props) {
           />
         </Box>
         <CardContent>
-          <Button
-            sx={{
-              backgroundColor: "black",
-              color: "#FFFFFF",
-
-              width: "100%",
-              "&:hover": { backgroundColor: "red" },
-              marginBottom: "10px",
-            }}
-          >
-            Add To Cart
-          </Button>
           <Typography variant={"h5"}>{props.title}</Typography>
         </CardContent>
 
