@@ -47,7 +47,7 @@ const Maingrid = styled("grid")(({ theme }) => ({
 
   "@media (min-width:900px) and (max-width:1294px)": {
    
-    marginBottom: "20%",
+    marginBottom: "5%",
     width:'30%'
   },
   "@media (min-width:600px) and (max-width:900px)": {
@@ -83,48 +83,7 @@ const [showlist,setShowlist]=useState(false)
           },
         }}>
 
-{/* <Grid sx={{mb:"3%"}} container>
 
-<Box sx={{position:'relative'}}>
-{showlist ?     <Grid md={6} sm={6}  item   sx={{height:"350px",width:{sm:"50%",xs:"50%"},mt:"4%",ml:'3%',zIndex:"1000"}}>
-
-<CategoryList data={Cdate}/>
-</Grid>  :<Grid sx={{display:{sm:"none",md:"flex",xs:"none"}}}><CategoryList data={Cdate}/> </Grid>}
-{showlist?  <ArrowCircleLeftIcon onClick={()=>setShowlist(false)} sx={{display:{md:"none"},color:"purple", position:"absolute",top:"80px",fontSize:"40px",cursor:"pointer"}}/> :<ArrowCircleRightIcon onClick={()=>setShowlist(true)} sx={{display:{sm:"flex" , md:"none"},position:"absolute",top:"80px",fontSize:"40px",cursor:"pointer",color:"purple"}}/>}
-
-</Box>  
-
-
-{showlist ? <Grid   sm={6} md={6}  item sx={{width:{sm:"50%",xs:"50%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"0","@media(max-width:400px)":{marginLeft:'50px'}}}>
-<ImageViewer images={[
-
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
-'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
-'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
-'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
-
-
-
-]} />
-
-</Grid> :<Grid   sm={6} md={6}  item sx={{width:{sm:"50%",xs:"100%"}, display:"flex",justifyContent:"center",alignItems:"center",margin:"auto",mt:"10%",zIndex:"1","@media(max-width:400px)":{marginLeft:'50px'}}}>
-<ImageViewer images={[
-
-'https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png',
-'https://cdn.wccftech.com/wp-content/uploads/2021/06/Tailored-Power-States-Balanced-1030x579.png',
-'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80',
-'https://www.club386.com/wp-content/uploads/2022/04/Alienware-m17-R5.jpg',
-'https://i.pcmag.com/imagery/reviews/002Sl2sNGGaoGXVj4c8Iu6g-1.jpg',
-
-
-
-]} />
-
-</Grid>}
-
-
-</Grid> */}
 <Grid container>
 <Grid sx={{display:{sm:"block",xs:"block",md:"none"}}}>
 <SidebarDrawer/>
@@ -160,7 +119,7 @@ const [showlist,setShowlist]=useState(false)
             <DescriptionTitle title={'Flash Sales'} />
   </Grid>
 
-
+<Container maxWidth={"lg"}>
               <Grid container
           sx={{
             marginTop: "2%",
@@ -225,6 +184,8 @@ const [showlist,setShowlist]=useState(false)
          
             </Grid> 
 
+            </Container>
+
 
 
 
@@ -236,7 +197,7 @@ const [showlist,setShowlist]=useState(false)
              <Grid item xs={12}  sx={{mb:"3%"}}>
             <Title title={"Categories"} />
             </Grid> 
-                   {/* <Box sx={{alignItems:"center",display:"flex",justifyContent:"space-between",width:"100%",m:{xs:"15%",md:"0",lg:'2.5% 0'}}}>
+                   <Box sx={{alignItems:"center",display:"flex",justifyContent:"space-between",width:"100%",m:{xs:"15%",md:"0",lg:'2.5% 0'}}}>
             <Grid item sx={{m:{xs:"10%", md:"0"},textAlign:"center" , whiteSpace:"nowrap"}}>
             <DescriptionTitle title={'Brows By Category'} />
             </Grid>
@@ -254,7 +215,7 @@ data={ [
 
 />
 </Grid>
-</Box>    */}
+</Box>    
 
  <Grid item sx={{margin:"auto",width:"100%"}}>
 <CategorySignButton
@@ -274,7 +235,7 @@ data={
 />
 </Grid> 
 
-
+<Container maxWidth={"lg"}>
   <Grid item xs={12} mt={"4%"} sx={{width:"100%"}}>
 <AdImage
 
@@ -293,6 +254,7 @@ textsec={"Sec"}
 
 />
 </Grid>   
+</Container>
 
 <Grid item xs={12} sx={{mt:9}}>
 
@@ -304,7 +266,7 @@ textsec={"Sec"}
             <DescriptionTitle title={'Explore Our Products'} />
   </Grid>
 
-
+<Container maxWidth={"lg"}>
    <Grid container
 
 sx={{
@@ -313,7 +275,7 @@ sx={{
     
     display: "flex",
   
-    justifyContent: "space-between",
+    justifyContent: {xs:"center"},
     width: "100%",
 
     height: { xs: "100%" },
@@ -339,7 +301,7 @@ sx={{
              <Button sx={{textAlign:"center",color:"#fff",backgroundColor:"#DB4444",padding:'10px',borderRadius:'7px',"&:hover":{backgroundColor:"red"}}}>view All Products</Button>
              </Grid>
 </Grid>   
-
+</Container>
 
 
 

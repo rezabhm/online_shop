@@ -33,7 +33,11 @@ import {
     "@media (min-width:600px) and (max-width:900px)": {
       marginRight: "6%",
       marginBottom: "15%",
-      width:"33%"
+      width:"33%",
+    
+
+   
+     
       
     },
     "@media(max-width:460px)": {
@@ -46,7 +50,7 @@ import {
 const OurProducts = (props) => {
   return (
     <>
-     <Grid container >
+   
              {props.WhishlistItems2.map((item)=>(
                
                 
@@ -63,7 +67,7 @@ const OurProducts = (props) => {
              </Maingrid>
                   
             ))}
-             </Grid> 
+          
     
     </>
   )

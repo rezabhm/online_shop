@@ -7,7 +7,7 @@ function Title(props){
         <>
 
                 <Typography sx={{    backgroundColor: "rgba(211, 211 , 211 , 0.4)",
-    width: "90%", 
+    width: "100%", 
     height: "30px",
     color: "#DB4444",
     marginLeft: "10px",
