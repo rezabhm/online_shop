@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./Pages/Home";
-
+import Login from "./Pages/Login";
 import About from "../src/Pages/About";
 import "./public.css";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
@@ -17,6 +17,7 @@ root.render(
         <Route path="/About" element={<About />} />
         <Route path="/SignupPage" element={<SignupPage />} />
         <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </>
