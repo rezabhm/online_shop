@@ -471,7 +471,7 @@ function Home() {
           <DescriptionTitle title={"New Arrival"} />
         </Grid>
 
-        {/* <Grid container xs={12} sx={{mb:10}}>
+         <Grid container xs={12} sx={{mb:10}}>
 
 <AdDescriptionImage
 
@@ -487,7 +487,7 @@ function Home() {
 
     imageRT={{
 
-        url:'https://media.istockphoto.com/id/1259149757/vector/realistic-vector-black-laptop-computer-mockup-template-with-blank-screen-on-dark-black.jpg?s=612x612&w=0&k=20&c=ZVaFVWkpcpuQ5O0AyQMYxLvT-WYM6lou42BiHNV7Rt4=',
+        url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQokKnoTXigwLdFu8JlKEM_tswdTNwJ9Hcbwg&usqp=CAU',
         title:'Laptop',
         description:'laptop for design shop',
         pushLink:'/laptop'
@@ -520,7 +520,7 @@ function Home() {
 
 />
 
-</Grid> */}
+</Grid>
 
         <Grid xs={12} sx={{ display: "flex", justifyContent: "center" }}>
           <FeaturesIcons />
