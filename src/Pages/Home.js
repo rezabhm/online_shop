@@ -29,6 +29,13 @@ import Box from "@mui/material/Box/Box";
 import { useState } from "react";
 import OurProducts from "../Components/Home/OurProducts/OurProducts";
 import SidebarDrawer from "../Components/Home/SidebarDrawer/SidebarDrawer";
+import Sliderimg1 from '../Assets/images/bhD2pA.jpg'
+import Sliderimg2 from '../Assets/images/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png'
+import Sliderimg3 from '../Assets/images/New Project (5).jpg'
+import ProduvtImg1 from '../Assets/images/productimage1.jpg'
+import ProduvtImg4 from '../Assets/images/productimage4.png'
+import ProduvtImg2 from '../Assets/images/productimage2.webp'
+
 // import WhishListHome from '../Components/Home/WhishListHome/WhishListHome'
 
 const Maingrid = styled("grid")(({ theme }) => ({
@@ -98,11 +105,10 @@ function Home() {
           >
             <ImageViewer
               images={[
-                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
-                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
-                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
-                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
-                "https://www.cherrymx.de/_Resources/Persistent/7/8/5/6/78561b27f90f9cb5a002e2cee0e72ad6fd6943d6/Aufmacher.png",
+                {id:1 ,image:Sliderimg2},
+                {id:2 ,image:Sliderimg3},
+                {id:3,image:Sliderimg1}
+               
               ]}
             />
           </Grid>
@@ -137,7 +143,7 @@ function Home() {
             <Maingrid xs={12} sm={12} md={3} xl={3}>
               <Product
                 image={
-                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                  ProduvtImg1
                 }
                 title={"Abzar"}
                 price={100}
@@ -149,7 +155,7 @@ function Home() {
             <Maingrid xs={12} sm={12} md={3} xl={3}>
               <Product
                 image={
-                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                  ProduvtImg2
                 }
                 title={"Mobile"}
                 price={250}
@@ -173,7 +179,7 @@ function Home() {
             <Maingrid xs={12} sm={12} md={3} xl={3}>
               <Product
                 image={
-                  "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png"
+                  ProduvtImg4
                 }
                 title={"chador"}
                 price={75}
