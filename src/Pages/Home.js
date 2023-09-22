@@ -35,6 +35,16 @@ import Sliderimg3 from '../Assets/images/New Project (5).jpg'
 import ProduvtImg1 from '../Assets/images/productimage1.jpg'
 import ProduvtImg4 from '../Assets/images/productimage4.png'
 import ProduvtImg2 from '../Assets/images/productimage2.webp'
+import OurproductImg1 from '../Assets/images/81qvlpWgapL._AC_SL1500_.jpg'
+import OurproductImg2 from '../Assets/images/ourproduct2.jpg'
+import OurproductImg3 from '../Assets/images/ourproduct3.jpg'
+import OurproductImg4 from '../Assets/images/product4.jpg'
+import OurproductImg5 from '../Assets/images/product5.jpg'
+import OurproductImg6 from '../Assets/images/product6.jpg'
+import OurproductImg7 from '../Assets/images/product7.jpeg'
+import Ariivalimg1 from '../Assets/images/arriaval1.webp'
+
+
 
 // import WhishListHome from '../Components/Home/WhishListHome/WhishListHome'
 
@@ -374,39 +384,35 @@ function Home() {
                 {
                   id: 1,
                   image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                    OurproductImg1,
                   title: "phone",
                   price: "123",
                   rateNumber: "",
                 },
                 {
                   id: 2,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg2,
                   title: "laptop",
                   price: "123",
                   rateNumber: "",
                 },
                 {
                   id: 3,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg3,
                   title: "mobile",
                   price: "123",
                   rateNumber: "",
                 },
                 {
                   id: 4,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg4,
                   title: "Ipad",
                   price: "123",
                   rateNumber: "",
                 },
                 {
                   id: 5,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg5,
                   title: "smartPhone",
                   price: "123",
                   rateNumber: "",
@@ -421,16 +427,14 @@ function Home() {
                 },
                 {
                   id: 7,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg6,
                   title: "Ultra Hd",
                   price: "123",
                   rateNumber: "",
                 },
                 {
                   id: 8,
-                  image:
-                    "https://www.technolife.ir/image/color_image_TLP-24069_22a148_67f07ac9-7e8b-4fba-be60-92657a17a611.png",
+                  image:OurproductImg7,
                   title: "television",
                   price: "123",
                   rateNumber: "",
@@ -483,7 +487,7 @@ function Home() {
 
     imageL={{
 
-        url:'https://www.xgn.nl/images/articles/2020/202007/_970x545_crop_center-center_82_line/3136374/ps5_black.f1593781621.jpg',
+        url:Ariivalimg1,
         title:'PlayStation 5',
         description:'game for play station 5',
         pushLink:'/fck'
@@ -493,7 +497,7 @@ function Home() {
 
     imageRT={{
 
-        url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQokKnoTXigwLdFu8JlKEM_tswdTNwJ9Hcbwg&usqp=CAU',
+        url:Sliderimg2,
         title:'Laptop',
         description:'laptop for design shop',
         pushLink:'/laptop'
