@@ -17,11 +17,10 @@ function AdImageBox(props){
 
                 width: '100%',
                 height: '100%',
-                position: 'relative'
+                position: 'relative',
 
 
             }}>
-
                 <img
 
                     src={props.img}
@@ -30,12 +29,12 @@ function AdImageBox(props){
                 />
 
 
-                <Grid container spacing={2} sx={{
+                <Grid container spacing={0} sx={{
 
                     position: 'absolute',
                     bottom: '5%',
                     left: '5%',
-                    width: '50%',
+                    width: '100%',
 
 
                 }}>
@@ -116,12 +115,12 @@ function AdImageBox(props){
                 />
 
 
-                <Grid container spacing={2}  sx={{
+                <Grid container spacing={0}  sx={{
 
                     position:'absolute',
                     bottom:'5%',
                     left:'5%',
-                    width:'50%',
+                    width:'100%',
 
 
                 }}>
@@ -144,14 +143,15 @@ function AdImageBox(props){
 
 
 
-                    <Grid item xs={12}>
+                    <Grid item xs={12} sm={12} md={12} sx={{md:{mb:"-70px"}}}>
 
 
                         <Typography variant='h6' sx={{
 
                             color: 'rgba(255,255,255,0.75)',
                             whiteSpace:'nowrap',
-                            fontSize:'14px'
+                            fontSize:'14px',
+
 
                         }}>
 
@@ -161,35 +161,18 @@ function AdImageBox(props){
 
                     </Grid>
 
-                    <Grid item xs={12}>
+                    <Grid item xs={12} >
 
                         <Link href={props.pushLink}>
-
                             <Button endIcon={<ArrowForwardIcon />}>
-
                                 Shop Now
-
-
                             </Button>
-
                         </Link>
-
-
                     </Grid>
-
-
                 </Grid>
-
-
-
             </Box>
 
-
         )
-
-
-
-
     }
 
 }

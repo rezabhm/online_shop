@@ -10,10 +10,13 @@ import {
   Box,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
+import {Link} from "react-router-dom";
 
 function Product(props) {
   return (
+
     <Box>
+
       <Card
         sx={{
           width: "75%",
@@ -26,14 +29,18 @@ function Product(props) {
           },
           cursor: "pointer",
         }}
-      
+
       >
+
         <Box>
+            <Link to="/ProducPage.jsx" style={{textDecoration:"none"}} >
           <img
             style={{ height: "100%", width: "100%", marginBottom: "10px" }}
             src={props.image}
             alt=""
+
           />
+            </Link>
         </Box>
         <CardContent>
           <Typography variant={"h5"}>{props.title}</Typography>

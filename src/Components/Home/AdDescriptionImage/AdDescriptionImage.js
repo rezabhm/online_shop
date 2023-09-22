@@ -11,7 +11,7 @@ function AdDescriptionImage(props){
 
             <Grid container spacing={5}>
 
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
 
                     <AdImageBox
 
@@ -28,9 +28,9 @@ function AdDescriptionImage(props){
 
 
 
-                <Grid item xs={6} >
+                <Grid item xs={12} md={6} xl={6}  >
 
-                    <Grid item xs={12}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <AdImageBox
 
                             img={props.imageRT.url}
@@ -46,7 +46,7 @@ function AdDescriptionImage(props){
                     <Grid container  spacing={2}>
 
 
-                        <Grid item xs={6} >
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} >
                             <AdImageBox
 
                                 img={props.imageRL.url}
@@ -60,7 +60,7 @@ function AdDescriptionImage(props){
 
 
 
-                        <Grid item xs={6} >
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} sx={{md:{p:"100px"}}}>
                             <AdImageBox
 
                                 img={props.imageRR.url}
