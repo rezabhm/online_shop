@@ -9,8 +9,10 @@ const SignupForm = (style) => {
   const texFiled = [
     { id: 1, label: "Name", onchange: () => console.log("okay1") },
     { id: 2, label: "Last-Name", onchange: () => console.log("okay2") },
-    { id: 3, label: "Email", onchange: () => console.log("okay3") },
-    { id: 4, label: "Password", onchange: () => console.log("okay4") },
+    { id: 3, label: "UserName", onchange: () => console.log("okay3") },
+    { id: 4, label: "Email", onchange: () => console.log("okay4") },
+    { id: 5, label: "Password", onchange: () => console.log("okay5") },
+    { id: 6, label: "Confirm-Password", onchange: () => console.log("okay6") },
   ];
   return (
     <>
@@ -18,7 +20,7 @@ const SignupForm = (style) => {
         sx={{
           style,
           "& .MuiTextField-root": {
-            my: 2.6,
+
 
             display: "flex",
             width: "100%",
@@ -30,8 +32,8 @@ const SignupForm = (style) => {
         autoComplete="off"
       >
         <Header
-          title={"Create an account"}
-          title1={"Enter youre details below"}
+          title={"ساخت اکانت جدید"}
+          title1={"وارد کردن اطلاعات خود"}
         />
 
         {texFiled.map((item) => {
