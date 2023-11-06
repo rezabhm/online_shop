@@ -149,19 +149,44 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import SensorOccupiedOutlinedIcon from "@mui/icons-material/SensorOccupiedOutlined";
 import SearchIcon from "@mui/icons-material/Search";
-import { styled } from "@mui/material";
+import { Avatar, styled } from "@mui/material";
 import { InputBase, alpha } from "@mui/material";
 import FavoriteIcon from "./favoriteIcon";
 import ShoppingIcon from "./shoppingIcon";
 import { Link } from "react-router-dom";
-
+import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import ViewListOutlinedIcon from "@mui/icons-material/ViewListOutlined";
 const pages = [
   { id: 1, name: "Home", to: "/" },
   { id: 2, name: "Contact", to: "/ContactUs" },
   { id: 3, name: "About", to: "/about" },
   { id: 4, name: "Signup", to: "/SignupPage" },
 ];
-const settings = [];
+const settings = [
+  {
+    id: 1,
+    name: "My Account",
+    to: "/",
+    icon: <AccountCircleOutlinedIcon />,
+    color: "blue",
+  },
+  {
+    id: 2,
+    name: "My orders",
+    to: "/",
+    icon: <ViewListOutlinedIcon />,
+    color: "blue",
+  },
+  {
+    id: 3,
+    name: "Exit",
+    to: "/",
+    icon: <ExitToAppOutlinedIcon />,
+    color: "red",
+  },
+];
+
 const Search1 = styled("div")(({ theme }) => ({
   position: "relative",
 
@@ -294,7 +319,12 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "#333", display: "block" ,textTransform:"capitalize"}}
+                sx={{
+                  my: 2,
+                  color: "#333",
+                  display: "block",
+                  textTransform: "capitalize",
+                }}
               >
                 <Link
                   style={{
@@ -355,9 +385,57 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  width: "210px",
+                  borderBottom: "1px solid gray",
+                  pb: 2,
+                }}
+              >
+                <Avatar sx={{}}>R</Avatar>
+                <Box>
+                  <Typography>Reza bahrami</Typography>
+                  <Typography>09124415566</Typography>
+                </Box>
+              </Box>
+
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem
+                  key={setting.id}
+                  onClick={handleCloseUserMenu}
+                  sx={{
+                    "& .LL-root": {
+                      color: "#444",
+                    },
+
+                    "&:hover": {
+                      "& .LL-root": {
+                        color: setting.color,
+                      },
+                    },
+                  }}
+                >
+                  <Link
+                    className="LL-root"
+                    style={{
+                      textDecoration: "none",
+                    }}
+                    to={setting.to}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        pl: 2,
+                      }}
+                    >
+                      <Typography>{setting.icon}</Typography>
+                      <Typography sx={{ pl: 1 }}> {setting.name}</Typography>
+                    </Box>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
